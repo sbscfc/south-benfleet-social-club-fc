@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>South Benfleet Social Club FC</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #071a3d;
+            --navy-light: #0d2b5c;
+            --blue: #4da3ff;
+            --light-blue: #8bc8ff;
+            --white: #ffffff;
+            --light: #f4f7fb;
+            --dark: #101828;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: var(--navy);
+            color: white;
+            padding: 18px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--blue);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: var(--light-blue);
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 650px;
+            background:
+                linear-gradient(rgba(7,26,61,0.90), rgba(7,26,61,0.90)),
+                radial-gradient(circle at center, #174985, #071a3d);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .badge {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: white;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--navy);
+            font-weight: 900;
+            font-size: 18px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 82px);
+            line-height: 0.95;
+            margin-bottom: 25px;
+            font-weight: 900;
+            letter-spacing: -3px;
+        }
+
+        .hero h1 span {
+            color: var(--light-blue);
+        }
+
+        .hero p {
+            font-size: 21px;
+            color: #dcecff;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            background: var(--blue);
+            color: white;
+            padding: 15px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 800;
+            margin: 5px;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            background: #70b8ff;
+        }
+
+        .button.secondary {
+            background: transparent;
+            border: 2px solid white;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 80px 6%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            color: var(--navy);
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #667085;
+        }
+
+        /* NEXT MATCH */
+
+        .match-section {
+            background: white;
+        }
+
+        .match-card {
+            max-width: 950px;
+            margin: auto;
+            background: var(--navy);
+            color: white;
+            border-radius: 18px;
+            padding: 45px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(7,26,61,0.18);
+        }
+
+        .match-label {
+            text-transform: uppercase;
+            color: var(--light-blue);
+            font-weight: 800;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+
+        .match-card h3 {
+            font-size: 34px;
+            margin: 12px 0;
+        }
+
+        .match-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+
+        .match-info div strong {
+            display: block;
+            font-size: 22px;
+        }
+
+        .match-info div span {
+            color: #b9c9df;
+            font-size: 13px;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: var(--navy);
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #667085;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: var(--navy);
+            color: white;
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 18px;
+            color: #d7e5f7;
+        }
+
+        /* TEAMS */
+
+        .team-card {
+            text-align: center;
+        }
+
+        .team-card h3 {
+            font-size: 26px;
+        }
+
+        .team-card .team-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--navy);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 900;
+            margin: 0 auto 20px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #040f25;
+            color: white;
+            padding: 50px 6% 25px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        footer h3 {
+            margin-bottom: 12px;
+        }
+
+        footer p {
+            color: #aebed3;
+        }
+
+        .copyright {
+            border-top: 1px solid #203455;
+            margin-top: 35px;
+            padding-top: 20px;
+            text-align: center;
+            color: #71839d;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 580px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .match-card {
+                padding: 30px 20px;
+            }
+
+            .match-card h3 {
+                font-size: 27px;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+        <div class="logo">
+            SBSC<span>FC</span>
+        </div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#fixtures">Fixtures</a></li>
+            <li><a href="#teams">Teams</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#charity">Charity</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                SBSC<br>FC
+            </div>
+
+            <h1>
+                SOUTH BENFLEET<br>
+                <span>SOCIAL CLUB FC</span>
+            </h1>
+
+            <p>
+                Football. Community. Charity.
+            </p>
+
+            <a href="#fixtures" class="button">
+                VIEW FIXTURES
+            </a>
+
+            <a href="#about" class="button secondary">
+                OUR STORY
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- NEXT MATCH -->
+
+    <section class="match-section" id="fixtures">
+
+        <div class="section-title">
+            <h2>Next Match</h2>
+            <p>Be there and support the club.</p>
+        </div>
+
+        <div class="match-card">
+
+            <div class="match-label">
+                Upcoming Fixture
+            </div>
+
+            <h3>
+                South Benfleet Social Club FC
+                <br>
+                <span style="color:#8bc8ff;">VS</span>
+                <br>
+                Opponents
+            </h3>
+
+            <div class="match-info">
+
+                <div>
+                    <strong>DATE</strong>
+                    <span>Coming Soon</span>
+                </div>
+
+                <div>
+                    <strong>TIME</strong>
+                    <span>Coming Soon</span>
+                </div>
+
+                <div>
+                    <strong>VENUE</strong>
+                    <span>Coming Soon</span>
+                </div>
+
+            </div>
+
+            <a href="#contact" class="button">
+                MATCH INFORMATION
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <div class="about-container">
+
+            <h2>More Than A Football Club.</h2>
+
+            <p>
+                South Benfleet Social Club FC is a community-focused
+                football club built around football, friendship,
+                charity and bringing people together.
+            </p>
+
+            <br>
+
+            <p>
+                From the players on the pitch to the supporters
+                around it, everyone is part of the journey.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- TEAMS -->
+
+    <section id="teams">
+
+        <div class="section-title">
+
+            <h2>Our Teams</h2>
+
+            <p>
+                Football for different generations of the community.
+            </p>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card team-card">
+
+                <div class="team-number">
+                    1
+                </div>
+
+                <h3>Open Age</h3>
+
+                <p>
+                    Our open-age Sunday side,
+                    competing together and representing SBSCFC.
+                </p>
+
+            </div>
+
+
+            <div class="card team-card">
+
+                <div class="team-number">
+                    35+
+                </div>
+
+                <h3>Vets</h3>
+
+                <p>
+                    Our Veterans side,
+                    keeping the football going for the older generation.
+                </p>
+
+            </div>
+
+
+            <div class="card team-card">
+
+                <div class="team-number">
+                    +
+                </div>
+
+                <h3>Charity Football</h3>
+
+                <p>
+                    Special matches and events helping raise money
+                    for worthwhile causes.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CLUB FEATURES -->
+
+    <section id="news">
+
+        <div class="section-title">
+
+            <h2>Latest From SBSCFC</h2>
+
+            <p>
+                Keep up with everything happening around the club.
+            </p>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">⚽</div>
+
+                <h3>Fixtures & Results</h3>
+
+                <p>
+                    Follow upcoming matches and see how the teams
+                    have been getting on.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">📸</div>
+
+                <h3>Club Gallery</h3>
+
+                <p>
+                    Matchday photographs, events and memories
+                    from the club.
+                </p>
+
+            </div>
+
+
+            <div class="card" id="charity">
+
+                <div class="card-icon">❤️</div>
+
+                <h3>Charity</h3>
+
+                <p>
+                    Find out about the causes we support and
+                    the events we organise to raise money.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="match-section">
+
+        <div class="section-title">
+
+            <h2>Get Involved</h2>
+
+            <p>
+                Want to be part of South Benfleet Social Club FC?
+            </p>
+
+        </div>
+
+        <div class="match-card">
+
+            <h3>
+                Follow The Journey
+            </h3>
+
+            <p style="color:#d7e5f7; margin:20px 0;">
+                Follow us on social media for fixtures,
+                announcements, photos and club news.
+            </p>
+
+            <a href="#" class="button">
+                FACEBOOK
+            </a>
+
+            <a href="#" class="button">
+                INSTAGRAM
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>
+                    SOUTH BENFLEET SOCIAL CLUB FC
+                </h3>
+
+                <p>
+                    Football. Community. Charity.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Club
+                </h3>
+
+                <p>
+                    Fixtures & Results<br>
+                    Teams<br>
+                    News<br>
+                    Charity
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Follow Us
+                </h3>
+
+                <p>
+                    Facebook<br>
+                    Instagram
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 South Benfleet Social Club FC.
+            All rights reserved.
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
