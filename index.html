@@ -181,52 +181,84 @@
         }
 
         /* NEXT MATCH */
+/* MATCH CONTAINER */
 
-        .match-section {
-            background: white;
-        }
+.match-container {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
 
-        .match-card {
-            max-width: 950px;
-            margin: auto;
-            background: var(--navy);
-            color: white;
-            border-radius: 18px;
-            padding: 45px;
-            text-align: center;
-            box-shadow: 0 15px 40px rgba(7,26,61,0.18);
-        }
+.match-section {
+    background: white;
+    flex: 1;
+    min-width: 0;
+}
 
-        .match-label {
-            text-transform: uppercase;
-            color: var(--light-blue);
-            font-weight: 800;
-            letter-spacing: 2px;
-            font-size: 13px;
-        }
+.match-card {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    background: var(--navy);
+    color: white;
+    border-radius: 18px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 15px 48px rgba(7,26,61,0.18);
+    box-sizing: border-box;
+}
 
-        .match-card h3 {
-            font-size: 34px;
-            margin: 12px 0;
-        }
+.match-label {
+    text-transform: uppercase;
+    color: var(--light-blue);
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
 
-        .match-info {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin: 25px 0;
-            flex-wrap: wrap;
-        }
+.match-card h3 {
+    font-size: 34px;
+    margin: 12px 0;
+}
 
-        .match-info div strong {
-            display: block;
-            font-size: 22px;
-        }
+.match-info {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
 
-        .match-info div span {
-            color: #b9c9df;
-            font-size: 13px;
-        }
+.match-info div strong {
+    display: block;
+    font-size: 22px;
+}
+
+.match-info div span {
+    color: #8bc8ff;
+    font-size: 13px;
+}
+        
+@media (max-width: 800px) {
+
+    .match-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .match-card {
+        padding: 30px 20px;
+    }
+
+    .match-card h3 {
+        font-size: 26px;
+    }
+
+}
 
         /* CARDS */
 
@@ -442,6 +474,49 @@
 <section class="club-image">
     <img src="image.png" alt="South Benfleet Social Club FC">
 </section>
+<div class="match-container">
+
+    <!-- LAST MATCH -->
+
+    <section class="match-section last-match">
+
+        <div class="section-title">
+            <h2>Last Match</h2>
+            <p>Our most recent game</p>
+        </div>
+
+        <div class="match-card">
+
+            <div class="match-label">
+                Full Time
+            </div>
+
+            <h3>
+                South Benfleet Social Club FC
+                <br>
+                <span style="color:#8bc8ff;">1 - 3</span>
+                <br>
+                Wickford Town Reserves FC
+            </h3>
+
+            <div class="match-info">
+
+                <div>
+                    <strong>DATE</strong>
+                    <span>Sunday 26th July 2026</span>
+                </div>
+
+                <div>
+                    <strong>RESULT</strong>
+                    <span>1 - 3</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
 
     <!-- NEXT MATCH -->
 
@@ -459,11 +534,11 @@
             </div>
 
             <h3>
-Old Southendians Vets
-<br>
-<span style="color:#8bc8ff;">VS</span>
-<br>
-South Benfleet Social Club FC
+                Old Southendians Vets
+                <br>
+                <span style="color:#8bc8ff;">VS</span>
+                <br>
+                South Benfleet Social Club FC
             </h3>
 
             <div class="match-info">
@@ -480,7 +555,11 @@ South Benfleet Social Club FC
 
                 <div>
                     <strong>VENUE</strong>
-                    <span>Garon Park<br>Southend-on-Sea, Essex<br>SS2 4FA</span></span>
+                    <span>
+                        Garon Park<br>
+                        Southend-on-Sea, Essex<br>
+                        SS2 4FA
+                    </span>
                 </div>
 
             </div>
@@ -492,6 +571,8 @@ South Benfleet Social Club FC
         </div>
 
     </section>
+
+</div>
 
 
     <!-- ABOUT -->
