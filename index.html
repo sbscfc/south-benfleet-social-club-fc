@@ -84,12 +84,31 @@
     justify-content: flex-start;
     text-align: left;
     padding: 60px 7%;
+    position: relative;
+    overflow: hidden;
         }
-
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background-image: url('image.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.08;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
         .hero-content {
-            max-width: 850px;
-            width:100%;
-        }
+    max-width: 850px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+        
 .badge {
     width: 120px;
     height: 120px;
