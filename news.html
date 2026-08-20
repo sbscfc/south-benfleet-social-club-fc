@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>News | South Benfleet Social Club FC</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #071a3d;
+            --navy-light: #0d2b5c;
+            --blue: #4da3ff;
+            --light-blue: #8bc8ff;
+            --white: #ffffff;
+            --light: #f4f7fb;
+            --dark: #101828;
+            --grey: #52627a;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: var(--navy);
+            color: white;
+            padding: 18px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--blue);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: var(--light-blue);
+        }
+
+        /* HEADER */
+
+        .page-header {
+            background:
+                linear-gradient(rgba(7,26,61,0.96), rgba(7,26,61,0.96)),
+                radial-gradient(circle at center, #174985, #071a3d);
+
+            color: white;
+            text-align: center;
+            padding: 90px 20px 80px;
+        }
+
+        .page-label {
+            color: var(--light-blue);
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .page-header h1 {
+            font-size: clamp(42px, 7vw, 72px);
+            line-height: 1;
+            font-weight: 900;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+
+        .page-header h1 span {
+            color: var(--light-blue);
+        }
+
+        .page-header p {
+            max-width: 700px;
+            margin: auto;
+            color: #dcecff;
+            font-size: 20px;
+        }
+
+        /* NEWS CONTAINER */
+
+        .news-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 70px 20px;
+        }
+
+        /* FEATURED STORY */
+
+        .featured-story {
+            background: var(--navy);
+            color: white;
+            border-radius: 18px;
+            padding: 55px;
+            margin-bottom: 45px;
+            box-shadow: 0 12px 35px rgba(7,26,61,0.14);
+        }
+
+        .featured-label {
+            color: var(--light-blue);
+            font-size: 13px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 14px;
+        }
+
+        .featured-story h2 {
+            font-size: 42px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .featured-story .date {
+            color: #bcd3ea;
+            font-size: 15px;
+            margin-bottom: 22px;
+        }
+
+        .featured-story p {
+            color: #dcecff;
+            max-width: 850px;
+            font-size: 17px;
+            margin-bottom: 28px;
+        }
+
+        .button {
+            display: inline-block;
+            background: var(--blue);
+            color: white;
+            text-decoration: none;
+            padding: 14px 26px;
+            border-radius: 8px;
+            font-weight: 800;
+        }
+
+        .button:hover {
+            background: #2f8fe8;
+        }
+
+        /* NEWS GRID */
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(7,26,61,0.08);
+            border: 1px solid #e3ebf5;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 32px rgba(7,26,61,0.14);
+        }
+
+        .news-tag {
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .news-card h3 {
+            color: var(--navy);
+            font-size: 24px;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .news-card p {
+            color: var(--grey);
+            font-size: 15px;
+            margin-bottom: 22px;
+        }
+
+        .news-link {
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 900;
+        }
+
+        .news-link:hover {
+            color: var(--blue);
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #040f25;
+            color: white;
+            padding: 50px 6% 25px;
+            text-align: center;
+        }
+
+        footer h3 {
+            margin-bottom: 12px;
+        }
+
+        footer p {
+            color: #aebed3;
+        }
+
+        .copyright {
+            border-top: 1px solid #203455;
+            margin-top: 35px;
+            padding-top: 20px;
+            color: #71839d;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .page-header {
+                padding: 70px 20px;
+            }
+
+            .featured-story {
+                padding: 35px 25px;
+            }
+
+            .featured-story h2 {
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="index.html" class="logo">
+            SBSC<span>FC</span>
+        </a>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="fixtures.html">
+                    Fixtures
+                </a>
+            </li>
+
+            <li>
+                <a href="teams.html">
+                    Teams
+                </a>
+            </li>
+
+            <li>
+                <a href="news.html">
+                    News
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#charity">
+                    Charity
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- PAGE HEADER -->
+
+    <header class="page-header">
+
+        <div class="page-label">
+            South Benfleet Social Club FC
+        </div>
+
+        <h1>
+            CLUB <span>NEWS</span>
+        </h1>
+
+        <p>
+            The latest news, updates and stories from SBSCFC.
+        </p>
+
+    </header>
+
+
+    <!-- NEWS -->
+
+    <main class="news-container">
+
+
+        <!-- FEATURED -->
+
+        <article class="featured-story">
+
+            <div class="featured-label">
+                Featured Story
+            </div>
+
+            <h2>
+                A Special Day For SBSCFC
+            </h2>
+
+            <div class="date">
+                Inaugural Charity Match • 26th July 2026
+            </div>
+
+            <p>
+                South Benfleet Social Club FC played its inaugural
+                match against Wickford Town Reserves FC in a special
+                charity fixture in aid of St Luke's Hospice.
+            </p>
+
+            <a href="match-report-wickford.html" class="button">
+                READ MATCH REPORT
+            </a>
+
+        </article>
+
+
+        <!-- NEWS GRID -->
+
+        <section class="news-grid">
+
+
+            <article class="news-card">
+
+                <div class="news-tag">
+                    Club
+                </div>
+
+                <h3>
+                    The Road To 2027/28
+                </h3>
+
+                <p>
+                    Find out about the club's journey from charity
+                    football towards the ambition of having a side
+                    ready for competitive football in 2027/28.
+                </p>
+
+                <a href="about.html" class="news-link">
+                    READ OUR STORY →
+                </a>
+
+            </article>
+
+
+            <article class="news-card">
+
+                <div class="news-tag">
+                    Squad
+                </div>
+
+                <h3>
+                    Meet The SBSCFC Squad
+                </h3>
+
+                <p>
+                    Meet the players representing South Benfleet
+                    Social Club FC as the club begins its journey.
+                </p>
+
+                <a href="teams.html" class="news-link">
+                    VIEW THE SQUAD →
+                </a>
+
+            </article>
+
+
+            <article class="news-card">
+
+                <div class="news-tag">
+                    Next Fixture
+                </div>
+
+                <h3>
+                    Old Southendians Vets Visit
+                </h3>
+
+                <p>
+                    SBSCFC's next charity fixture sees Old
+                    Southendians Vets take on South Benfleet Social
+                    Club FC at Garon Park.
+                </p>
+
+                <a href="fixtures.html" class="news-link">
+                    VIEW FIXTURES →
+                </a>
+
+            </article>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>
+            South Benfleet Social Club FC
+        </h3>
+
+        <p>
+            Football. Community. Charity.
+        </p>
+
+        <div class="copyright">
+            © 2026 South Benfleet Social Club FC. All rights reserved.
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
