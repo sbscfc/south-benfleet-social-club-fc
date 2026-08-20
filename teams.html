@@ -36,33 +36,21 @@
 /* SQUAD PHOTO BACKGROUND */
 
 body {
-    position: relative;
-    min-height: 100vh;
-}
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
 
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
+    background:
+        linear-gradient(
+            rgba(244, 247, 251, 0.82),
+            rgba(244, 247, 251, 0.82)
+        ),
+        url("ChatGPT%20Image%20Aug%2019,%202026,%2006_43_39PM.png");
 
-    background-image: url("ChatGPT%20Image%20Aug%2019,%202026,%2006_43_39PM.png");
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
-
-    opacity: 0.12;
-    z-index: -2;
-}
-
-body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-
-    background: rgba(244, 247, 251, 0.72);
-
-    z-index: -1;
-    pointer-events: none;
 }
         /* NAVIGATION */
 
