@@ -155,48 +155,73 @@
             gap: 20px;
         }
 
-        .player-card {
-            background: white;
-            border-radius: 14px;
-            padding: 28px 20px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(7,26,61,0.08);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            border: 1px solid transparent;
+.player-card {
+    background: white;
+    border-radius: 16px;
+    padding: 28px 20px 24px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(7,26,61,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #e3ebf5;
+    position: relative;
+    overflow: hidden;
+}
+
+.player-card::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: linear-gradient(90deg, var(--navy), var(--blue));
+    margin: -28px -20px 20px;
+}
         }
 
-        .player-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(7,26,61,0.12);
-            border-color: #dcecff;
-        }
+.player-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 32px rgba(7,26,61,0.14);
+    border-color: #cfe3f7;
+}
+        
+.player-number {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: var(--navy);
+    opacity: 0.08;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -3px;
+    margin: 0;
+    z-index: 0;
+}
+    
 
-        .player-number {
-            color: var(--blue);
-            font-size: 15px;
-            font-weight: 900;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
+.player-name {
+    position: relative;
+    z-index: 1;
+    color: var(--navy);
+    font-size: 21px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+ 
+.captain-badge {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin-top: 12px;
+    padding: 5px 11px;
+    background: var(--navy);
+    color: var(--light-blue);
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
 
-        .player-name {
-            color: var(--navy);
-            font-size: 20px;
-            font-weight: 800;
-        }
-
-        .captain-badge {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 5px 10px;
-            background: var(--light-blue);
-            color: var(--navy);
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 900;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
+        
 
         /* FUTURE PROFILE NOTE */
 
