@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Story | South Benfleet Social Club FC</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #071a3d;
+            --navy-light: #0d2b5c;
+            --blue: #4da3ff;
+            --light-blue: #8bc8ff;
+            --white: #ffffff;
+            --light: #f4f7fb;
+            --dark: #101828;
+            --grey: #52627a;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: var(--navy);
+            color: white;
+            padding: 18px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--blue);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: var(--light-blue);
+        }
+
+        /* HEADER */
+
+        .story-header {
+            background:
+                linear-gradient(rgba(7,26,61,0.95), rgba(7,26,61,0.95)),
+                radial-gradient(circle at center, #174985, #071a3d);
+            color: white;
+            text-align: center;
+            padding: 90px 20px 80px;
+        }
+
+        .story-label {
+            color: var(--light-blue);
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .story-header h1 {
+            font-size: clamp(42px, 7vw, 72px);
+            line-height: 1;
+            font-weight: 900;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+
+        .story-header h1 span {
+            color: var(--light-blue);
+        }
+
+        .story-header p {
+            max-width: 700px;
+            margin: auto;
+            color: #dcecff;
+            font-size: 20px;
+        }
+
+        /* STORY CONTENT */
+
+        .story-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 75px 20px;
+        }
+
+        .story-section {
+            background: white;
+            padding: 45px;
+            border-radius: 16px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 30px rgba(7,26,61,0.08);
+        }
+
+        .story-section h2 {
+            color: var(--navy);
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+
+        .story-section h2 span {
+            color: var(--blue);
+        }
+
+        .story-section p {
+            color: var(--grey);
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+
+        /* TIMELINE */
+
+        .timeline {
+            position: relative;
+            margin-top: 35px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 0 0 40px 35px;
+            border-left: 3px solid var(--blue);
+        }
+
+        .timeline-item:last-child {
+            border-left: 3px solid transparent;
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: 0;
+            width: 17px;
+            height: 17px;
+            background: var(--blue);
+            border-radius: 50%;
+            box-shadow: 0 0 0 5px var(--light);
+        }
+
+        .timeline-year {
+            color: var(--blue);
+            font-size: 14px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .timeline-item h3 {
+            color: var(--navy);
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .timeline-item p {
+            margin-bottom: 0;
+        }
+
+        /* VISION */
+
+        .vision {
+            background: var(--navy);
+            color: white;
+            text-align: center;
+        }
+
+        .vision h2 {
+            color: white;
+        }
+
+        .vision p {
+            color: #dcecff;
+        }
+
+        .vision-highlight {
+            color: var(--light-blue);
+            font-size: 30px;
+            font-weight: 900;
+            margin: 20px 0;
+        }
+
+        /* CLOSING */
+
+        .closing {
+            text-align: center;
+        }
+
+        .closing h2 {
+            font-size: 38px;
+        }
+
+        .closing .motto {
+            color: var(--blue);
+            font-size: 24px;
+            font-weight: 900;
+            margin: 20px 0;
+        }
+
+        /* BUTTON */
+
+        .back-button {
+            text-align: center;
+            margin-top: 45px;
+        }
+
+        .button {
+            display: inline-block;
+            background: var(--blue);
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 800;
+        }
+
+        .button:hover {
+            background: #2f8fe8;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #040f25;
+            color: white;
+            padding: 50px 6% 25px;
+            text-align: center;
+        }
+
+        footer h3 {
+            margin-bottom: 12px;
+        }
+
+        footer p {
+            color: #aebed3;
+        }
+
+        .copyright {
+            border-top: 1px solid #203455;
+            margin-top: 35px;
+            padding-top: 20px;
+            color: #71839d;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .story-header {
+                padding: 70px 20px;
+            }
+
+            .story-section {
+                padding: 30px 20px;
+            }
+
+            .story-section h2 {
+                font-size: 27px;
+            }
+
+            .timeline-item h3 {
+                font-size: 21px;
+            }
+
+            .vision-highlight {
+                font-size: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <div class="logo">
+            SBSC<span>FC</span>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="fixtures.html">
+                    Fixtures
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#teams">
+                    Teams
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#news">
+                    News
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#charity">
+                    Charity
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- HEADER -->
+
+    <header class="story-header">
+
+        <div class="story-label">
+            The Story Of SBSCFC
+        </div>
+
+        <h1>
+            OUR <span>STORY</span>
+        </h1>
+
+        <p>
+            From our first charity match in 2026 to our ambition
+            of building a side ready for competitive football.
+        </p>
+
+    </header>
+
+
+    <!-- STORY -->
+
+    <main class="story-container">
+
+
+        <!-- WHO WE ARE -->
+
+        <section class="story-section">
+
+            <h2>
+                More Than Just A <span>Football Club</span>
+            </h2>
+
+            <p>
+                South Benfleet Social Club FC was formed in 2026
+                with a simple idea: bring people together through
+                football, friendship, community and charity.
+            </p>
+
+            <p>
+                The club is currently focused on charity football
+                matches, giving players and supporters the chance
+                to enjoy the game while helping raise money for
+                worthwhile causes.
+            </p>
+
+            <p>
+                While the club is only at the beginning of its
+                journey, we want to build something that can grow
+                with the local community.
+            </p>
+
+        </section>
+
+
+        <!-- TIMELINE -->
+
+        <section class="story-section">
+
+            <h2>
+                Our <span>Journey</span>
+            </h2>
+
+            <div class="timeline">
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        2026
+                    </div>
+
+                    <h3>
+                        The Beginning
+                    </h3>
+
+                    <p>
+                        South Benfleet Social Club FC was formed,
+                        creating the foundations for a new community
+                        football club.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        26 July 2026
+                    </div>
+
+                    <h3>
+                        Our First Match
+                    </h3>
+
+                    <p>
+                        SBSCFC played its inaugural match against
+                        Wickford Town Reserves FC in a charity
+                        fixture at the Len Forge Centre.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        2026/27
+                    </div>
+
+                    <h3>
+                        Building The Club
+                    </h3>
+
+                    <p>
+                        Our focus is on playing charity matches,
+                        growing the squad, building our identity
+                        and becoming part of the local football
+                        community.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        The Future
+                    </div>
+
+                    <h3>
+                        The Road To 2027/28
+                    </h3>
+
+                    <p>
+                        Our ambition is to build towards having
+                        a side ready to compete for the 2027/28
+                        season.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- VISION -->
+
+        <section class="story-section vision">
+
+            <h2>
+                The Road To <span>2027/28</span>
+            </h2>
+
+            <div class="vision-highlight">
+                BUILD. GROW. COMPETE.
+            </div>
+
+            <p>
+                Charity football is where our journey begins.
+                The long-term ambition is to build a strong squad,
+                establish the club within the local football
+                community and be ready to take the next step
+                into competitive football.
+            </p>
+
+            <p>
+                We know there is plenty of work to do between now
+                and then, but we're excited about what the future
+                can bring.
+            </p>
+
+        </section>
+
+
+        <!-- CHARITY -->
+
+        <section class="story-section">
+
+            <h2>
+                Football With A <span>Purpose</span>
+            </h2>
+
+            <p>
+                Charity will remain an important part of what
+                South Benfleet Social Club FC stands for.
+            </p>
+
+            <p>
+                Our inaugural fixture against Wickford Town
+                Reserves FC was played in aid of St Luke's Hospice,
+                and we hope to continue using football to support
+                worthwhile causes as the club grows.
+            </p>
+
+        </section>
+
+
+        <!-- CLOSING -->
+
+        <section class="story-section closing">
+
+            <h2>
+                This Is Only The <span>Beginning</span>
+            </h2>
+
+            <div class="motto">
+                FOOTBALL. COMMUNITY. CHARITY.
+            </div>
+
+            <p>
+                From the players on the pitch to the people
+                supporting the club off it, everyone is part of
+                the journey.
+            </p>
+
+            <p>
+                South Benfleet Social Club FC was formed in 2026.
+                What comes next is up to all of us.
+            </p>
+
+        </section>
+
+
+        <!-- BACK BUTTON -->
+
+        <div class="back-button">
+
+            <a href="index.html" class="button">
+                BACK TO HOME
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>
+            South Benfleet Social Club FC
+        </h3>
+
+        <p>
+            Football. Community. Charity.
+        </p>
+
+        <div class="copyright">
+            © 2026 South Benfleet Social Club FC. All rights reserved.
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
