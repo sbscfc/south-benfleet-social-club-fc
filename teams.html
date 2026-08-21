@@ -183,8 +183,63 @@ body {
     border: 1px solid #e3ebf5;
     position: relative;
     overflow: hidden;
+} 
+/* STAFF */
+
+.staff-section {
+    max-width: 1100px;
+    margin: 70px auto 0;
+    padding: 0 20px 70px;
 }
 
+.staff-section .section-title {
+    margin-bottom: 35px;
+}
+
+.staff-section .section-title h2 {
+    color: var(--navy);
+}
+
+.staff-section .section-title p {
+    color: var(--grey);
+}
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.staff-card {
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid #e3ebf5;
+    border-top: 5px solid var(--navy);
+    border-radius: 16px;
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(7, 26, 61, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(7, 26, 61, 0.12);
+}
+
+.staff-card h3 {
+    color: var(--navy);
+    font-size: 21px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.staff-role {
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
 .player-card::before {
     content: "";
     display: block;
@@ -577,7 +632,50 @@ body {
                 <div class="player-number">25</div>
                 <div class="player-name">Brandon Lee</div>
             </div>
+<!-- STAFF -->
 
+<section class="staff-section">
+
+    <div class="section-title">
+        <h2>Staff</h2>
+        <p>The people working behind the scenes at South Benfleet Social Club FC.</p>
+    </div>
+
+    <div class="staff-grid">
+
+        <div class="staff-card">
+            <h3>Tony Hoskins</h3>
+            <div class="staff-role">Manager</div>
+        </div>
+
+        <div class="staff-card">
+            <h3>Ron Forrester</h3>
+            <div class="staff-role">Assistant Manager</div>
+        </div>
+
+        <div class="staff-card">
+            <h3>Dave Ince</h3>
+            <div class="staff-role">GK Coach</div>
+        </div>
+
+        <div class="staff-card">
+            <h3>Mitch Stripe</h3>
+            <div class="staff-role">Coach</div>
+        </div>
+
+        <div class="staff-card">
+            <h3>Martin Pauling</h3>
+            <div class="staff-role">Club Treasurer</div>
+        </div>
+
+        <div class="staff-card">
+            <h3>Tom Robertson</h3>
+            <div class="staff-role">Director of Football Operations</div>
+        </div>
+
+    </div>
+
+</section>
 
         </div>
 
