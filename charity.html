@@ -289,7 +289,57 @@
             border: 1px solid #e3ebf5;
             border-radius: 14px;
             padding: 30px;
-        }
+        } /* CHARITIES WORKED WITH */
+
+.charity-worked {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    background: var(--light);
+    border: 1px solid #e3ebf5;
+    border-radius: 16px;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.charity-logo {
+    width: 170px;
+    height: 170px;
+    flex-shrink: 0;
+    background: white;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+}
+
+.charity-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.charity-worked-info h3 {
+    color: var(--navy);
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.charity-worked-info p {
+    color: var(--grey);
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.charity-worked-info .status {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
 
         .charity-card h3 {
             color: var(--navy);
@@ -670,25 +720,35 @@
                 continues to support more worthwhile causes.
             </p>
 
-            <div class="charity-grid">
+            <div class="charity-worked">
 
-                <div class="charity-card">
+    <div class="charity-logo">
 
-                    <div class="status">
-                        July 2026
-                    </div>
+        <img
+            src="58d59a20-4d58-46c9-8316-904773cfa0b6.jpg"
+            alt="St Luke's Hospice"
+        >
 
-                    <h3>
-                        St Luke's Hospice
-                    </h3>
+    </div>
 
-                    <p>
-                        Supported through our inaugural charity match
-                        against Wickford Town Reserves FC.
-                    </p>
+    <div class="charity-worked-info">
 
-                </div>
+        <div class="status">
+            JULY 2026
+        </div>
 
+        <h3>
+            St Luke's Hospice
+        </h3>
+
+        <p>
+            Supported through our inaugural charity match
+            against Wickford Town Reserves FC.
+        </p>
+
+    </div>
+
+</div>
 
                 <div class="charity-card">
 
