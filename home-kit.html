@@ -295,7 +295,112 @@
             font-size: 13px;
             margin-top: 8px;
         }
+    }
 
+/* ORDER POPUP */
+
+.order-popup {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    inset: 0;
+    background: rgba(4, 15, 37, 0.75);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.order-popup.active {
+    display: flex;
+}
+
+.order-popup-content {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    background: white;
+    border-radius: 18px;
+    padding: 40px 35px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.order-popup-content h2 {
+    color: var(--navy);
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.order-popup-content p {
+    color: var(--grey);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.close-popup {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    border: none;
+    background: none;
+    color: #667085;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.close-popup:hover {
+    color: var(--navy);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-button {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.social-button.facebook {
+    background: #1877f2;
+}
+
+.social-button.instagram {
+    background: #c13584;
+}
+
+.social-button:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 500px) {
+
+    .order-popup-content {
+        padding: 35px 22px;
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+
+    .social-button {
+        width: 100%;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
         /* MOBILE */
 
         @media (max-width: 800px) {
@@ -468,9 +573,9 @@
                 </div>
 
 
-                <a href="#" class="order-button">
-                    Order Now
-                </a>
+         <button class="order-button" onclick="openOrderPopup()">
+           Order Now
+         </button>
 
                 <a href="store.html" class="back-to-store">
                     ← Back to Club Store
@@ -502,8 +607,72 @@
         </p>
 
     </footer>
+    
+<!-- ORDER POPUP -->
 
+<div id="orderPopup" class="order-popup">
 
+    <div class="order-popup-content">
+
+        <button class="close-popup" onclick="closeOrderPopup()">
+            &times;
+        </button>
+
+        <h2>
+            Interested in purchasing?
+        </h2>
+
+        <p>
+            If you are interested in purchasing anything from our store,
+            please contact us via Facebook or Instagram.
+        </p>
+
+        <div class="social-links">
+
+            <a
+                href="https://www.facebook.com/profile.php?id=61593122416466"
+                target="_blank"
+                rel="noopener"
+                class="social-button facebook"
+            >
+                Facebook
+            </a>
+
+            <a
+                href="https://www.instagram.com/southbenfleetsocialclubfc"
+                target="_blank"
+                rel="noopener"
+                class="social-button instagram"
+            >
+                Instagram
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+
+    function openOrderPopup() {
+        document.getElementById("orderPopup").classList.add("active");
+    }
+
+    function closeOrderPopup() {
+        document.getElementById("orderPopup").classList.remove("active");
+    }
+
+    window.addEventListener("click", function(event) {
+
+        const popup = document.getElementById("orderPopup");
+
+        if (event.target === popup) {
+            closeOrderPopup();
+        }
+
+    });
+
+</script>
 </body>
 
 </html>
