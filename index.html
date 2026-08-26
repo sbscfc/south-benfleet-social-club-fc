@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>South Benfleet Social Club FC</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -30,26 +33,31 @@
             line-height: 1.6;
         }
 
-        /* NAVIGATION */
+
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
             background: var(--navy);
             color: white;
             padding: 18px 6%;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-.logo {
-    font-size: 22px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    color: white;
-    text-decoration: none;
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: white;
+            text-decoration: none;
         }
 
         .logo span {
@@ -73,117 +81,200 @@
             color: var(--light-blue);
         }
 
-        /* HERO */
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
-    min-height: 500px;
-    background:
-        linear-gradient(rgba(7,26,61,0.90), rgba(7,26,61,0.90)),
-        radial-gradient(circle at center, #174985, #071a3d);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: left;
-    padding: 60px 7%;
-    position: relative;
-    overflow: hidden;
+            min-height: 500px;
+
+            background:
+                linear-gradient(
+                    rgba(7,26,61,0.90),
+                    rgba(7,26,61,0.90)
+                ),
+                radial-gradient(
+                    circle at center,
+                    #174985,
+                    #071a3d
+                );
+
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            text-align: left;
+
+            padding: 60px 7%;
+
+            position: relative;
+            overflow: hidden;
         }
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 1200px;
-    height: 600px;
-    background-image: url('ChatGPT%20Image%20Aug%2019,%202026,%2006_43_39PM.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.12;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) perspective(1000px) rotateX(45deg) scale(1.2);
-    filter: brightness(0.9);
-    pointer-events: none;
-}
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 1200px;
+            height: 600px;
+
+            background-image:
+                url('ChatGPT%20Image%20Aug%2019,%202026,%2006_43_39PM.png');
+
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            opacity: 0.12;
+
+            top: 50%;
+            left: 50%;
+
+            transform:
+                translate(-50%, -50%)
+                perspective(1000px)
+                rotateX(45deg)
+                scale(1.2);
+
+            filter: brightness(0.9);
+
+            pointer-events: none;
+        }
+
         .hero-content {
-    max-width: 850px;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-}
-        
-.badge {
-    width: 120px;
-    height: 120px;
-    margin: 0 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+            max-width: 850px;
+            width: 100%;
 
-.badge img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-}
-.club-image {
-    width: 100%;
-    padding: 40px 20px;
-    background: white;
-    text-align: center;
-}
+            position: relative;
+            z-index: 1;
+        }
 
-.club-image img {
-    width: 100%;
-    max-width: 900px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 12px;
-}
-.hero h1 {
-    font-size: clamp(36px, 4vw, 56px);
-    line-height: 0.98;
-    margin-bottom: 18px;
-    font-weight: 900;
-    letter-spacing: -2px;
-}
+
+        /* =========================
+           CLUB BADGE
+        ========================= */
+
+        .badge {
+            width: 120px;
+            height: 120px;
+
+            margin: 0 0 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .badge img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+
+            display: block;
+        }
+
+
+        /* =========================
+           CLUB IMAGE
+        ========================= */
+
+        .club-image {
+            width: 100%;
+
+            padding: 40px 20px;
+
+            background: white;
+
+            text-align: center;
+        }
+
+        .club-image img {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+
+            display: block;
+
+            margin: 0 auto;
+
+            border-radius: 12px;
+        }
+
+
+        /* =========================
+           HERO TEXT
+        ========================= */
+
+        .hero h1 {
+            font-size: clamp(36px, 4vw, 56px);
+
+            line-height: 0.98;
+
+            margin-bottom: 18px;
+
+            font-weight: 900;
+
+            letter-spacing: -2px;
+        }
 
         .hero h1 span {
             color: var(--light-blue);
         }
 
         .hero p {
-    font-size: 18px;
-    color: #dcecff;
-    margin-bottom: 30px;
-}
-        
+            font-size: 18px;
+
+            color: #dcecff;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
 
         .button {
             display: inline-block;
+
             background: var(--blue);
+
             color: white;
+
             padding: 15px 28px;
+
             border-radius: 8px;
+
             text-decoration: none;
+
             font-weight: 800;
+
             margin: 5px;
+
             transition: 0.2s;
         }
 
         .button:hover {
             transform: translateY(-2px);
+
             background: #70b8ff;
         }
 
         .button.secondary {
             background: transparent;
+
             border: 2px solid white;
         }
 
-        /* SECTIONS */
+
+        /* =========================
+           SECTIONS
+        ========================= */
 
         section {
             padding: 80px 6%;
@@ -191,265 +282,361 @@
 
         .section-title {
             text-align: center;
+
             margin-bottom: 45px;
         }
 
         .section-title h2 {
             color: var(--navy);
+
             font-size: 38px;
+
             margin-bottom: 10px;
         }
 
         .section-title p {
             color: #667085;
         }
-/* CLUB SLIDESHOW */
 
-.club-slideshow {
-    width: 100%;
-    padding: 40px 20px 50px;
-    background: var(--light);
-}
 
-.slideshow-container {
-    position: relative;
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(7, 26, 61, 0.12);
-    background: white;
-}
+        /* =========================
+           CLUB SLIDESHOW
+        ========================= */
 
-.slide {
-    display: none;
-    width: 100%;
-}
+        .club-slideshow {
+            width: 100%;
 
-.slide.active {
-    display: block;
-}
+            padding: 40px 20px 50px;
 
-.slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+            background: var(--light);
+        }
 
-/* ARROWS */
+        .slideshow-container {
+            position: relative;
 
-.slide-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+            width: 100%;
+            max-width: 1100px;
 
-    width: 45px;
-    height: 45px;
+            margin: 0 auto;
 
-    border: none;
-    border-radius: 50%;
+            overflow: hidden;
 
-    background: rgba(7, 26, 61, 0.75);
-    color: white;
+            border-radius: 18px;
 
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 5;
-}
+            box-shadow:
+                0 10px 30px rgba(7, 26, 61, 0.12);
 
-.slide-button:hover {
-    background: rgba(77, 163, 255, 0.95);
-}
+            background: white;
+        }
 
-.slide-button.prev {
-    left: 18px;
-}
+        .slide {
+            display: none;
 
-.slide-button.next {
-    right: 18px;
-}
+            width: 100%;
+        }
 
-/* DOTS */
+        .slide.active {
+            display: block;
+        }
 
-.slide-dots {
-    text-align: center;
-    margin-top: 18px;
-}
+        .slide img {
+            width: 100%;
 
-.dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    background: #c9d3df;
-    border-radius: 50%;
-    cursor: pointer;
-}
+            height: auto;
 
-.dot.active {
-    background: var(--blue);
-}
+            display: block;
+        }
 
-/* MOBILE */
 
-@media (max-width: 800px) {
+        /* =========================
+           SLIDESHOW ARROWS
+        ========================= */
 
-    .club-slideshow {
-        padding: 25px 15px 35px;
-    }
+        .slide-button {
+            position: absolute;
 
-    .slide-button {
-        width: 38px;
-        height: 38px;
-        font-size: 20px;
-    }
+            top: 50%;
 
-}
+            transform: translateY(-50%);
 
-/* NEXT MATCH */
-        /* NEXT MATCH */
-/* MATCH CONTAINER */
+            width: 45px;
+            height: 45px;
 
-.match-container {
-    display: flex;
-    gap: 30px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
+            border: none;
 
-.match-section {
-    background: white;
-    flex: 1;
-    min-width: 0;
-}
+            border-radius: 50%;
 
-.match-card {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    background: var(--navy);
-    color: white;
-    border-radius: 18px;
-    padding: 45px;
-    text-align: center;
-    box-shadow: 0 15px 48px rgba(7,26,61,0.18);
-    box-sizing: border-box;
-}
-    .last-match .match-card {
-    min-height: 550px;
-}
+            background: rgba(7, 26, 61, 0.75);
 
-.match-label {
-    text-transform: uppercase;
-    color: var(--light-blue);
-    font-weight: 800;
-    letter-spacing: 2px;
-    font-size: 13px;
-}
+            color: white;
 
-.match-card h3 {
-    font-size: 34px;
-    margin: 12px 0;
-}
+            font-size: 24px;
 
-.match-info {
-    display: flex;
-    justify-content: center;
-    gap: 48px;
-    margin: 25px 0;
-    flex-wrap: wrap;
-}
+            cursor: pointer;
 
-.match-info div strong {
-    display: block;
-    font-size: 22px;
-}
+            z-index: 5;
+        }
 
-.match-info div span {
-    color: #8bc8ff;
-    font-size: 13px;
-}
-.match-info div span {
-    color: #8bc8ff;
-    font-size: 13px;
-}
+        .slide-button:hover {
+            background: rgba(77, 163, 255, 0.95);
+        }
 
-.next-match-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin: 30px 0;
-}
+        .slide-button.prev {
+            left: 18px;
+        }
 
-.next-match-info div span {
-    color: #8bc8ff;
-    font-size: 20px;
-    line-height: 1.5;
-}
+        .slide-button.next {
+            right: 18px;
+        }
 
-.next-match-info .fixture-date span {
-    font-size: 22px;
-    font-weight: 700;
-}
 
-.next-match-info .fixture-time span {
-    font-size: 22px;
-    font-weight: 700;
-}
+        /* =========================
+           SLIDESHOW DOTS
+        ========================= */
 
-.next-match-info .fixture-venue {
-    margin-top: 5px;
-}
+        .slide-dots {
+            text-align: center;
 
-.next-match-info .fixture-venue span {
-    font-size: 20px;
-    line-height: 1.6;
-}
-#fixtures .button {
-    width: 300px;
-    max-width: 100%;
-    text-align: center;
-}
-        
-        
-     
-@media (max-width: 800px) {
+            margin-top: 18px;
+        }
 
-    .match-container {
-        flex-direction: column;
-        gap: 30px;
-    }
+        .dot {
+            display: inline-block;
 
-    .match-card {
-        padding: 30px 20px;
-    }
+            width: 10px;
+            height: 10px;
 
-    .match-card h3 {
-        font-size: 26px;
-    }
+            margin: 0 5px;
 
-}
+            background: #c9d3df;
 
-        /* CARDS */
+            border-radius: 50%;
+
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background: var(--blue);
+        }
+
+
+        /* =========================
+           MOBILE SLIDESHOW
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .club-slideshow {
+                padding: 25px 15px 35px;
+            }
+
+            .slide-button {
+                width: 38px;
+                height: 38px;
+
+                font-size: 20px;
+            }
+
+        }
+
+
+        /* =========================
+           MATCHES
+        ========================= */
+
+        .match-container {
+            display: flex;
+
+            gap: 30px;
+
+            width: 100%;
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 0 20px;
+
+            box-sizing: border-box;
+        }
+
+        .match-section {
+            background: white;
+
+            flex: 1;
+
+            min-width: 0;
+        }
+
+        .match-card {
+            width: 100%;
+
+            max-width: none;
+
+            margin: 0;
+
+            background: var(--navy);
+
+            color: white;
+
+            border-radius: 18px;
+
+            padding: 45px;
+
+            text-align: center;
+
+            box-shadow:
+                0 15px 48px rgba(7,26,61,0.18);
+
+            box-sizing: border-box;
+        }
+
+        .last-match .match-card {
+            min-height: 550px;
+        }
+
+        .match-label {
+            text-transform: uppercase;
+
+            color: var(--light-blue);
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            font-size: 13px;
+        }
+
+        .match-card h3 {
+            font-size: 34px;
+
+            margin: 12px 0;
+        }
+
+        .match-info {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 48px;
+
+            margin: 25px 0;
+
+            flex-wrap: wrap;
+        }
+
+        .match-info div strong {
+            display: block;
+
+            font-size: 22px;
+        }
+
+        .match-info div span {
+            color: #8bc8ff;
+
+            font-size: 13px;
+        }
+
+        .next-match-info {
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            gap: 20px;
+
+            margin: 30px 0;
+        }
+
+        .next-match-info div span {
+            color: #8bc8ff;
+
+            font-size: 20px;
+
+            line-height: 1.5;
+        }
+
+        .next-match-info .fixture-date span {
+            font-size: 22px;
+
+            font-weight: 700;
+        }
+
+        .next-match-info .fixture-time span {
+            font-size: 22px;
+
+            font-weight: 700;
+        }
+
+        .next-match-info .fixture-venue {
+            margin-top: 5px;
+        }
+
+        .next-match-info .fixture-venue span {
+            font-size: 20px;
+
+            line-height: 1.6;
+        }
+
+        #fixtures .button {
+            width: 300px;
+
+            max-width: 100%;
+
+            text-align: center;
+        }
+
+
+        /* =========================
+           MATCH MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .match-container {
+                flex-direction: column;
+
+                gap: 30px;
+            }
+
+            .match-card {
+                padding: 30px 20px;
+            }
+
+            .match-card h3 {
+                font-size: 26px;
+            }
+
+        }
+
+
+        /* =========================
+           CARDS
+        ========================= */
 
         .cards {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 25px;
+
             max-width: 1200px;
+
             margin: auto;
         }
 
         .card {
             background: white;
+
             padding: 35px;
+
             border-radius: 14px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.06);
+
             transition: 0.2s;
         }
 
@@ -459,12 +646,15 @@
 
         .card-icon {
             font-size: 35px;
+
             margin-bottom: 15px;
         }
 
         .card h3 {
             color: var(--navy);
+
             font-size: 23px;
+
             margin-bottom: 10px;
         }
 
@@ -472,30 +662,41 @@
             color: #667085;
         }
 
-        /* ABOUT */
+
+        /* =========================
+           ABOUT
+        ========================= */
 
         .about {
             background: var(--navy);
+
             color: white;
         }
 
         .about-container {
             max-width: 1000px;
+
             margin: auto;
+
             text-align: center;
         }
 
         .about h2 {
             font-size: 42px;
+
             margin-bottom: 20px;
         }
 
         .about p {
             font-size: 18px;
+
             color: #d7e5f7;
         }
 
-        /* TEAMS */
+
+        /* =========================
+           TEAMS
+        ========================= */
 
         .team-card {
             text-align: center;
@@ -508,48 +709,120 @@
         .team-card .team-number {
             width: 80px;
             height: 80px;
+
             border-radius: 50%;
+
             background: var(--navy);
+
             color: white;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             font-size: 28px;
+
             font-weight: 900;
+
             margin: 0 auto 20px;
         }
 
-        /* FOOTER */
-/* FOOTER PARTNERS */
 
-.footer-partners {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 70px;
-    padding: 30px 20px;
-    margin-bottom: 25px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
+        /* =========================
+           SOCIAL MEDIA ICONS
+        ========================= */
 
-.footer-partners img {
-    width: auto;
-    height: 55px;
-    max-width: 160px;
-    object-fit: contain;
-}
+        .social-icons {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 20px;
+
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: block;
+        }
+
+        .social-icons img {
+            width: 55px;
+            height: 55px;
+
+            object-fit: contain;
+
+            display: block;
+
+            border-radius: 10px;
+
+            transition:
+                transform 0.2s ease;
+        }
+
+        .social-icons a:hover img {
+            transform: scale(1.08);
+        }
+
+
+        /* =========================
+           FOOTER PARTNERS
+        ========================= */
+
+        .footer-partners {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 70px;
+
+            padding: 30px 20px;
+
+            margin-bottom: 25px;
+
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .footer-partners img {
+            width: auto;
+
+            height: 55px;
+
+            max-width: 160px;
+
+            object-fit: contain;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
             background: #040f25;
+
             color: white;
+
             padding: 50px 6% 25px;
         }
 
         .footer-content {
             max-width: 1200px;
+
             margin: auto;
+
             display: flex;
+
             justify-content: space-between;
+
             gap: 30px;
+
             flex-wrap: wrap;
         }
 
@@ -563,25 +836,36 @@
 
         .copyright {
             border-top: 1px solid #203455;
+
             margin-top: 35px;
+
             padding-top: 20px;
+
             text-align: center;
+
             color: #71839d;
+
             font-size: 13px;
         }
 
-        /* MOBILE */
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 800px) {
 
             nav {
                 flex-direction: column;
+
                 gap: 15px;
             }
 
             nav ul {
                 gap: 15px;
+
                 flex-wrap: wrap;
+
                 justify-content: center;
             }
 
@@ -608,187 +892,307 @@
             section {
                 padding: 60px 5%;
             }
-    .hero {
-        min-height: 460px;
-        padding: 45px 25px;
-        border-radius: 0 0 28px 28px;
-    }
 
-    .hero-content {
-        max-width: 100%;
-    }
+            .hero {
+                min-height: 460px;
 
-    .hero h1 {
-        font-size: clamp(34px, 10vw, 48px);
-    }
+                padding: 45px 25px;
 
-    .hero p {
-        font-size: 16px;
-    }
+                border-radius: 0 0 28px 28px;
+            }
 
-    .badge {
-        width: 90px;
-        height: 90px;
-    }
+            .hero-content {
+                max-width: 100%;
+            }
 
-    .club-image {
-        margin: -30px auto 45px;
-        padding: 0 14px;
-    }
+            .hero h1 {
+                font-size: clamp(34px, 10vw, 48px);
+            }
 
-    .club-image img {
-        border-radius: 18px;
-    }
+            .hero p {
+                font-size: 16px;
+            }
 
-    .match-container {
-        grid-template-columns: 1fr;
-        padding: 10px 18px 55px;
-        gap: 40px;
-    }
+            .badge {
+                width: 90px;
+                height: 90px;
+            }
 
-    .section-title {
-        text-align: center;
-    }
+            .club-image {
+                margin: -30px auto 45px;
 
-    .match-card {
-        padding: 32px 22px;
-        border-radius: 18px;
-    }
+                padding: 0 14px;
+            }
 
-    .match-card h3 {
-        font-size: 27px;
-    }
+            .club-image img {
+                border-radius: 18px;
+            }
 
-    .match-info {
-        gap: 22px;
-    }
+            .match-container {
+                grid-template-columns: 1fr;
 
-}
-</style>  
+                padding: 10px 18px 55px;
+
+                gap: 40px;
+            }
+
+            .section-title {
+                text-align: center;
+            }
+
+            .match-card {
+                padding: 32px 22px;
+
+                border-radius: 18px;
+            }
+
+            .match-card h3 {
+                font-size: 27px;
+            }
+
+            .match-info {
+                gap: 22px;
+            }
+
+            .social-icons img {
+                width: 50px;
+                height: 50px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <!-- NAVIGATION -->
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
     <nav>
-<a href="index.html" class="logo">
-    SBSC<span>FC</span>
-</a>
 
-<ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="fixtures.html">Fixtures</a></li>
-    <li><a href="teams.html">Teams</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="charity.html">Charity</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="store.html">Club Store</a></li>
-</ul>
+        <a href="index.html" class="logo">
+            SBSC<span>FC</span>
+        </a>
+
+        <ul>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="fixtures.html">Fixtures</a>
+            </li>
+
+            <li>
+                <a href="teams.html">Teams</a>
+            </li>
+
+            <li>
+                <a href="news.html">News</a>
+            </li>
+
+            <li>
+                <a href="charity.html">Charity</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+            <li>
+                <a href="store.html">Club Store</a>
+            </li>
+
+        </ul>
+
     </nav>
 
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <section class="hero" id="home">
 
         <div class="hero-content">
 
-<div class="badge">
-  <img src="WhatsApp%20Image%202026-08-19%20at%2009.38.25.jpeg" alt="South Benfleet Social Club FC badge">
-</div>
+            <div class="badge">
+
+                <img
+                    src="WhatsApp%20Image%202026-08-19%20at%2009.38.25.jpeg"
+                    alt="South Benfleet Social Club FC badge"
+                >
+
+            </div>
+
 
             <h1>
                 SOUTH BENFLEET<br>
                 <span>SOCIAL CLUB FC</span>
             </h1>
 
+
             <p>
                 Football. Community. Charity.
             </p>
 
-<a href="fixtures.html" class="button">
-    VIEW FIXTURES
-</a>
 
-         <a href="about.html" class="button secondary">
-    OUR STORY
-</a>
+            <a
+                href="fixtures.html"
+                class="button"
+            >
+                VIEW FIXTURES
+            </a>
+
+
+            <a
+                href="about.html"
+                class="button secondary"
+            >
+                OUR STORY
+            </a>
 
         </div>
 
     </section>
-<!-- CLUB SLIDESHOW -->
 
-<section class="club-slideshow">
 
-    <div class="slideshow-container">
+    <!-- =========================
+         CLUB SLIDESHOW
+    ========================= -->
 
-        <div class="slide active">
-            <img
-                src="sbscfcsupport-slh.png"
-                alt="South Benfleet Social Club FC supporting St Luke's Hospice"
+    <section class="club-slideshow">
+
+        <div class="slideshow-container">
+
+
+            <div class="slide active">
+
+                <img
+                    src="sbscfcsupport-slh.png"
+                    alt="South Benfleet Social Club FC supporting St Luke's Hospice"
+                >
+
+            </div>
+
+
+            <div class="slide">
+
+                <img
+                    src="sbscfcsupport-bcfr.png"
+                    alt="South Benfleet Social Club FC supporting Benfleet First Responders"
+                >
+
+            </div>
+
+
+            <div class="slide">
+
+                <img
+                    src="charity%20match%20promo.jpeg"
+                    alt="South Benfleet Social Club FC charity match"
+                >
+
+            </div>
+
+
+            <div class="slide">
+
+                <img
+                    src="awaykitpromo.png"
+                    alt="South Benfleet Social Club FC away kit"
+                >
+
+            </div>
+
+
+            <div class="slide">
+
+                <img
+                    src="WhatsApp%20Image%202026-08-19%20at%2009.48.59.jpeg"
+                    alt="South Benfleet Social Club FC squad"
+                >
+
+            </div>
+
+
+            <button
+                class="slide-button prev"
+                onclick="changeSlide(-1)"
+                aria-label="Previous image"
             >
+                &#10094;
+            </button>
+
+
+            <button
+                class="slide-button next"
+                onclick="changeSlide(1)"
+                aria-label="Next image"
+            >
+                &#10095;
+            </button>
+
+
         </div>
 
-        <div class="slide">
-            <img
-                src="sbscfcsupport-bcfr.png"
-                alt="South Benfleet Social Club FC supporting Benfleet First Responders"
-            >
+
+        <div class="slide-dots">
+
+            <span
+                class="dot active"
+                onclick="currentSlide(1)"
+            ></span>
+
+            <span
+                class="dot"
+                onclick="currentSlide(2)"
+            ></span>
+
+            <span
+                class="dot"
+                onclick="currentSlide(3)"
+            ></span>
+
+            <span
+                class="dot"
+                onclick="currentSlide(4)"
+            ></span>
+
+            <span
+                class="dot"
+                onclick="currentSlide(5)"
+            ></span>
+
         </div>
 
-        <div class="slide">
-            <img
-                src="charity%20match%20promo.jpeg"
-                alt="South Benfleet Social Club FC charity match"
-            >
-        </div>
+    </section>
 
-        <div class="slide">
-            <img
-                src="awaykitpromo.png"
-                alt="South Benfleet Social Club FC away kit"
-            >
-        </div>
 
-        <div class="slide">
-            <img
-                src="WhatsApp%20Image%202026-08-19%20at%2009.48.59.jpeg"
-                alt="South Benfleet Social Club FC squad"
-            >
-        </div>
-
-        <button class="slide-button prev" onclick="changeSlide(-1)" aria-label="Previous image">
-            &#10094;
-        </button>
-
-        <button class="slide-button next" onclick="changeSlide(1)" aria-label="Next image">
-            &#10095;
-        </button>
-
-    </div>
-
-    <div class="slide-dots">
-
-        <span class="dot active" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-
-    </div>
-
-</section>
-
-    <!-- LAST MATCH -->
+    <!-- =========================
+         LAST MATCH
+    ========================= -->
 
     <section class="match-section last-match">
 
         <div class="section-title">
-            <h2>Last Match</h2>
-            <p>Our most recent game</p>
+
+            <h2>
+                Last Match
+            </h2>
+
+            <p>
+                Our most recent game
+            </p>
+
         </div>
+
 
         <div class="match-card">
 
@@ -796,44 +1200,83 @@
                 Full Time
             </div>
 
+
             <h3>
+
                 South Benfleet Social Club FC
+
                 <br>
-                <span style="color:#8bc8ff;">1 - 3</span>
+
+                <span style="color:#8bc8ff;">
+                    1 - 3
+                </span>
+
                 <br>
+
                 Wickford Town Reserves FC
+
             </h3>
+
 
             <div class="match-info">
 
                 <div>
-                    <strong>Sunday 26th July 2026</strong>
+
+                    <strong>
+                        Sunday 26th July 2026
+                    </strong>
+
                     <span></span>
+
                 </div>
 
+
                 <div>
-                    <strong>Len Forge Centre</strong>
+
+                    <strong>
+                        Len Forge Centre
+                    </strong>
+
                     <span></span>
+
                 </div>
 
             </div>
-<a href="match-report-wickford.html" class="button">
-      MATCH REPORT
- </a>
-            
+
+
+            <a
+                href="match-report-wickford.html"
+                class="button"
+            >
+                MATCH REPORT
+            </a>
+
         </div>
 
     </section>
 
 
-    <!-- NEXT MATCH -->
+    <!-- =========================
+         NEXT MATCH
+    ========================= -->
 
-    <section class="match-section" id="fixtures">
+    <section
+        class="match-section"
+        id="fixtures"
+    >
 
         <div class="section-title">
-            <h2>Next Match</h2>
-            <p>Be there and support the club.</p>
+
+            <h2>
+                Next Match
+            </h2>
+
+            <p>
+                Be there and support the club.
+            </p>
+
         </div>
+
 
         <div class="match-card">
 
@@ -841,59 +1284,106 @@
                 Upcoming Fixture
             </div>
 
+
             <h3>
+
                 Old Southendians Vets
+
                 <br>
-                <span style="color:#8bc8ff;">VS</span>
+
+                <span style="color:#8bc8ff;">
+                    VS
+                </span>
+
                 <br>
+
                 South Benfleet Social Club FC
+
             </h3>
-<div class="match-info next-match-info">
 
-    <div class="fixture-date">
-        <span>Sunday 6th September 2026</span>
-    </div>
 
-    <div class="fixture-time">
-        <span>9:30 AM</span>
-    </div>
+            <div class="match-info next-match-info">
 
-    <div class="fixture-venue">
-        <span>
-            Garon Park<br>
-            Southend-on-Sea, Essex<br>
-            SS2 4FA
-        </span>
-    </div>
+                <div class="fixture-date">
 
-           <a href="match-information.html" class="button">Match Information</a>
+                    <span>
+                        Sunday 6th September 2026
+                    </span>
+
+                </div>
+
+
+                <div class="fixture-time">
+
+                    <span>
+                        9:30 AM
+                    </span>
+
+                </div>
+
+
+                <div class="fixture-venue">
+
+                    <span>
+
+                        Garon Park<br>
+                        Southend-on-Sea, Essex<br>
+                        SS2 4FA
+
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="match-information.html"
+                    class="button"
+                >
+                    Match Information
+                </a>
+
+            </div>
 
         </div>
 
     </section>
 
-</div>
 
+    <!-- =========================
+         ABOUT
+    ========================= -->
 
-    <!-- ABOUT -->
-
-    <section class="about" id="about">
+    <section
+        class="about"
+        id="about"
+    >
 
         <div class="about-container">
 
-            <h2>More Than A Football Club.</h2>
+            <h2>
+                More Than A Football Club.
+            </h2>
+
 
             <p>
-                South Benfleet Social Club FC is a community-focused
-                football club built around football, friendship,
-                charity and bringing people together.
+
+                South Benfleet Social Club FC is a
+                community-focused football club built
+                around football, friendship, charity
+                and bringing people together.
+
             </p>
+
 
             <br>
 
+
             <p>
-                From the players on the pitch to the supporters
-                around it, everyone is part of the journey.
+
+                From the players on the pitch to the
+                supporters around it, everyone is part
+                of the journey.
+
             </p>
 
         </div>
@@ -901,110 +1391,146 @@
     </section>
 
 
-<!-- HOMEPAGE LINKS -->
+    <!-- =========================
+         HOMEPAGE LINKS
+    ========================= -->
 
-<section class="homepage-links">
-
-    <div class="section-title">
-
-        <h2>Latest From SBSCFC</h2>
-
-        <p>
-            Everything you need to keep up with the club.
-        </p>
-
-    </div>
-
-
-    <div class="cards">
-
-
-        <!-- CLUB STORE -->
-
-        <div class="card homepage-card">
-
-            <div class="card-icon">
-                🛍️
-            </div>
-
-            <h3>
-                Club Store
-            </h3>
-
-            <p>
-                Get your official South Benfleet Social Club FC
-                clothing and merchandise.
-            </p>
-
-            <a href="store.html" class="button">
-                Visit Store
-            </a>
-
-        </div>
-
-
-        <!-- LATEST NEWS -->
-
-        <div class="card homepage-card">
-
-            <div class="card-icon">
-                📰
-            </div>
-
-            <h3>
-                Latest News
-            </h3>
-
-            <p>
-                Keep up with the latest news, announcements
-                and updates from the club.
-            </p>
-
-            <a href="news.html" class="button">
-                Latest News
-            </a>
-
-        </div>
-
-
-        <!-- CHARITY -->
-
-        <div class="card homepage-card">
-
-            <div class="card-icon">
-                ❤️
-            </div>
-
-            <h3>
-                Charity
-            </h3>
-
-            <p>
-                Find out about the causes we support and
-                our upcoming charity work.
-            </p>
-
-            <a href="charity.html" class="button">
-                Our Charity Work
-            </a>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-   
-
-    <!-- CONTACT -->
-
-    <section id="contact" class="match-section">
+    <section class="homepage-links">
 
         <div class="section-title">
 
-            <h2>Get Involved</h2>
+            <h2>
+                Latest From SBSCFC
+            </h2>
+
+            <p>
+                Everything you need to keep up with the club.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <!-- CLUB STORE -->
+
+            <div class="card homepage-card">
+
+                <div class="card-icon">
+                    🛍️
+                </div>
+
+
+                <h3>
+                    Club Store
+                </h3>
+
+
+                <p>
+
+                    Get your official
+                    South Benfleet Social Club FC
+                    clothing and merchandise.
+
+                </p>
+
+
+                <a
+                    href="store.html"
+                    class="button"
+                >
+                    Visit Store
+                </a>
+
+            </div>
+
+
+            <!-- LATEST NEWS -->
+
+            <div class="card homepage-card">
+
+                <div class="card-icon">
+                    📰
+                </div>
+
+
+                <h3>
+                    Latest News
+                </h3>
+
+
+                <p>
+
+                    Keep up with the latest news,
+                    announcements and updates
+                    from the club.
+
+                </p>
+
+
+                <a
+                    href="news.html"
+                    class="button"
+                >
+                    Latest News
+                </a>
+
+            </div>
+
+
+            <!-- CHARITY -->
+
+            <div class="card homepage-card">
+
+                <div class="card-icon">
+                    ❤️
+                </div>
+
+
+                <h3>
+                    Charity
+                </h3>
+
+
+                <p>
+
+                    Find out about the causes
+                    we support and our upcoming
+                    charity work.
+
+                </p>
+
+
+                <a
+                    href="charity.html"
+                    class="button"
+                >
+                    Our Charity Work
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT / FOLLOW JOURNEY
+    ========================= -->
+
+    <section
+        id="contact"
+        class="match-section"
+    >
+
+        <div class="section-title">
+
+            <h2>
+                Get Involved
+            </h2>
 
             <p>
                 Want to be part of South Benfleet Social Club FC?
@@ -1012,57 +1538,95 @@
 
         </div>
 
+
         <div class="match-card">
 
             <h3>
                 Follow The Journey
             </h3>
 
+
             <p style="color:#d7e5f7; margin:20px 0;">
+
                 Follow us on social media for fixtures,
                 announcements, photos and club news.
+
             </p>
 
-<a
-    href="https://www.facebook.com/profile.php?id=61593122416466"
-    target="_blank"
-    rel="noopener noreferrer"
->
-    Facebook
-</a>
 
-<a
-    href="https://www.instagram.com/southbenfleetsocialclubfc"
-    target="_blank"
-    rel="noopener noreferrer"
->
-    Instagram
-</a>
+            <!-- CLICKABLE SOCIAL MEDIA LOGOS -->
+
+            <div class="social-icons">
+
+
+                <!-- FACEBOOK -->
+
+                <a
+                    href="https://www.facebook.com/profile.php?id=61593122416466"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Follow us on Facebook"
+                >
+
+                    <img
+                        src="Facebook_Logo_2023.png"
+                        alt="Facebook"
+                    >
+
+                </a>
+
+
+                <!-- INSTAGRAM -->
+
+                <a
+                    href="https://www.instagram.com/southbenfleetsocialclubfc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Follow us on Instagram"
+                >
+
+                    <img
+                        src="sm_5b37de3263964.jpg"
+                        alt="Instagram"
+                    >
+
+                </a>
+
+
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
-<!-- SPONSORS & PARTNERS -->
 
-<div class="footer-partners">
 
-    <img
-        src="selfsecurestorage.jpeg"
-        alt="Self Secure Storage"
-    >
+        <!-- SPONSORS & PARTNERS -->
 
-    <img
-        src="joma-logo-png_seeklogo-350643.png"
-        alt="Joma"
-    >
+        <div class="footer-partners">
 
-</div>
+            <img
+                src="selfsecurestorage.jpeg"
+                alt="Self Secure Storage"
+            >
+
+
+            <img
+                src="joma-logo-png_seeklogo-350643.png"
+                alt="Joma"
+            >
+
+        </div>
+
+
         <div class="footer-content">
+
 
             <div>
 
@@ -1084,10 +1648,12 @@
                 </h3>
 
                 <p>
+
                     Fixtures & Results<br>
                     Teams<br>
                     News<br>
                     Charity
+
                 </p>
 
             </div>
@@ -1100,11 +1666,14 @@
                 </h3>
 
                 <p>
+
                     Facebook<br>
                     Instagram
+
                 </p>
 
             </div>
+
 
         </div>
 
@@ -1116,54 +1685,97 @@
 
         </div>
 
-</footer>
 
-<script>
+    </footer>
 
-    let slideIndex = 1;
 
-    showSlide(slideIndex);
+    <!-- =========================
+         SLIDESHOW JAVASCRIPT
+    ========================= -->
 
-    function changeSlide(n) {
-        showSlide(slideIndex += n);
-    }
+    <script>
 
-    function currentSlide(n) {
-        showSlide(slideIndex = n);
-    }
+        let slideIndex = 1;
 
-    function showSlide(n) {
+        showSlide(slideIndex);
 
-        const slides = document.querySelectorAll(".slide");
-        const dots = document.querySelectorAll(".dot");
 
-        if (n > slides.length) {
-            slideIndex = 1;
+        function changeSlide(n) {
+
+            showSlide(
+                slideIndex += n
+            );
+
         }
 
-        if (n < 1) {
-            slideIndex = slides.length;
+
+        function currentSlide(n) {
+
+            showSlide(
+                slideIndex = n
+            );
+
         }
 
-        slides.forEach(slide => {
-            slide.classList.remove("active");
-        });
 
-        dots.forEach(dot => {
-            dot.classList.remove("active");
-        });
+        function showSlide(n) {
 
-        slides[slideIndex - 1].classList.add("active");
-        dots[slideIndex - 1].classList.add("active");
-    }
+            const slides =
+                document.querySelectorAll(".slide");
 
-    setInterval(() => {
-        changeSlide(1);
-    }, 5000);
+            const dots =
+                document.querySelectorAll(".dot");
 
-</script>
+
+            if (n > slides.length) {
+
+                slideIndex = 1;
+
+            }
+
+
+            if (n < 1) {
+
+                slideIndex = slides.length;
+
+            }
+
+
+            slides.forEach(slide => {
+
+                slide.classList.remove("active");
+
+            });
+
+
+            dots.forEach(dot => {
+
+                dot.classList.remove("active");
+
+            });
+
+
+            slides[
+                slideIndex - 1
+            ].classList.add("active");
+
+
+            dots[
+                slideIndex - 1
+            ].classList.add("active");
+
+        }
+
+
+        setInterval(() => {
+
+            changeSlide(1);
+
+        }, 5000);
+
+    </script>
+
 
 </body>
 
 </html>
-
