@@ -28,6 +28,11 @@
             --border: #e3ebf5;
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: var(--light);
@@ -35,7 +40,10 @@
             line-height: 1.6;
         }
 
-        /* NAVIGATION */
+
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
             background: var(--navy);
@@ -81,7 +89,10 @@
             color: var(--light-blue);
         }
 
-        /* PAGE HEADER */
+
+        /* =========================
+           PAGE HEADER
+        ========================= */
 
         .page-header {
             background:
@@ -121,7 +132,10 @@
             font-size: 17px;
         }
 
-        /* PRODUCT */
+
+        /* =========================
+           PRODUCT
+        ========================= */
 
         .product-container {
             max-width: 1150px;
@@ -136,7 +150,10 @@
             align-items: center;
         }
 
-        /* PRODUCT IMAGE */
+
+        /* =========================
+           PRODUCT IMAGE
+        ========================= */
 
         .product-image {
             width: 100%;
@@ -170,13 +187,17 @@
             display: block;
         }
 
-        /* PRODUCT DETAILS */
+
+        /* =========================
+           PRODUCT DETAILS
+        ========================= */
 
         .product-details {
             background: white;
             border: 1px solid var(--border);
             border-radius: 20px;
             padding: 40px;
+
             box-shadow:
                 0 10px 30px rgba(7, 26, 61, 0.08);
         }
@@ -214,7 +235,10 @@
             margin-bottom: 30px;
         }
 
-        /* PRODUCT INFORMATION */
+
+        /* =========================
+           PRODUCT INFORMATION
+        ========================= */
 
         .product-info {
             border-top: 1px solid var(--border);
@@ -239,7 +263,10 @@
             text-align: right;
         }
 
-        /* ORDER BUTTON */
+
+        /* =========================
+           ORDER BUTTON
+        ========================= */
 
         .order-button {
             display: inline-block;
@@ -257,13 +284,18 @@
 
             font-weight: 800;
             font-size: 15px;
+
+            transition: 0.2s ease;
         }
 
         .order-button:hover {
             background: var(--navy);
         }
 
-        /* BACK BUTTON */
+
+        /* =========================
+           BACK BUTTON
+        ========================= */
 
         .back-to-store {
             display: inline-block;
@@ -281,7 +313,84 @@
             color: var(--blue);
         }
 
-        /* FOOTER */
+
+        /* =========================
+           CONTACT / ORDER SECTION
+        ========================= */
+
+        .contact-store {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px 80px;
+
+            scroll-margin-top: 90px;
+        }
+
+        .contact-store-content {
+            background: white;
+
+            border: 1px solid var(--border);
+            border-radius: 20px;
+
+            padding: 45px 30px;
+
+            text-align: center;
+
+            box-shadow:
+                0 10px 30px rgba(7, 26, 61, 0.08);
+        }
+
+        .contact-store-content h2 {
+            color: var(--navy);
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .contact-store-content p {
+            color: var(--grey);
+            max-width: 650px;
+            margin: 0 auto 25px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-button {
+            display: inline-block;
+
+            padding: 12px 25px;
+
+            border-radius: 8px;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: 800;
+
+            transition: 0.2s ease;
+        }
+
+        .social-button.facebook {
+            background: #1877f2;
+        }
+
+        .social-button.instagram {
+            background: #c13584;
+        }
+
+        .social-button:hover {
+            opacity: 0.85;
+            transform: translateY(-1px);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             background: #040f25;
@@ -295,126 +404,11 @@
             font-size: 13px;
             margin-top: 8px;
         }
-    }
-
-/* ORDER POPUP */
-
-.order-popup {
-    display: none;
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 100vw;
-    height: 100vh;
-
-    z-index: 9999;
-
-    background: rgba(4, 15, 37, 0.75);
-
-    align-items: center;
-    justify-content: center;
-
-    padding: 20px;
-}
-
-.order-popup.active {
-    display: flex;
-}
-
-.order-popup.active {
-    display: flex;
-}
-
-.order-popup-content {
-    position: relative;
-    width: 100%;
-    max-width: 480px;
-    background: white;
-    border-radius: 18px;
-    padding: 40px 35px;
-    text-align: center;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
-}
-
-.order-popup-content h2 {
-    color: var(--navy);
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.order-popup-content p {
-    color: var(--grey);
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-.close-popup {
-    position: absolute;
-    top: 12px;
-    right: 15px;
-    border: none;
-    background: none;
-    color: #667085;
-    font-size: 30px;
-    line-height: 1;
-    cursor: pointer;
-}
-
-.close-popup:hover {
-    color: var(--navy);
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.social-button {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 8px;
-    color: white;
-    text-decoration: none;
-    font-weight: 800;
-}
-
-.social-button.facebook {
-    background: #1877f2;
-}
-
-.social-button.instagram {
-    background: #c13584;
-}
-
-.social-button:hover {
-    opacity: 0.85;
-}
-
-@media (max-width: 500px) {
-
-    .order-popup-content {
-        padding: 35px 22px;
-    }
-
-    .social-links {
-        flex-direction: column;
-    }
-
-    .social-button {
-        width: 100%;
-    }
-
-}
 
 
-/* MOBILE */
-
-@media (max-width: 800px) {
-        /* MOBILE */
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 800px) {
 
@@ -433,6 +427,10 @@
                 padding: 55px 20px;
             }
 
+            .page-header h1 {
+                font-size: 44px;
+            }
+
             .product-container {
                 padding: 40px 20px 60px;
             }
@@ -444,6 +442,7 @@
 
             .product-image {
                 min-height: 400px;
+                padding: 25px;
             }
 
             .product-details {
@@ -452,6 +451,89 @@
 
             .product-details h2 {
                 font-size: 31px;
+            }
+
+            .contact-store {
+                padding: 0 20px 60px;
+            }
+
+            .contact-store-content {
+                padding: 35px 20px;
+            }
+
+        }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 500px) {
+
+            nav {
+                padding: 16px 15px;
+            }
+
+            nav ul {
+                gap: 10px;
+            }
+
+            nav ul li a {
+                font-size: 13px;
+            }
+
+            .page-header {
+                padding: 45px 15px;
+            }
+
+            .page-header h1 {
+                font-size: 38px;
+            }
+
+            .page-header p {
+                font-size: 15px;
+            }
+
+            .product-container {
+                padding: 30px 15px 50px;
+            }
+
+            .product-image {
+                min-height: 300px;
+                padding: 20px;
+            }
+
+            .product-details {
+                padding: 25px 18px;
+            }
+
+            .product-details h2 {
+                font-size: 27px;
+            }
+
+            .product-price {
+                font-size: 24px;
+            }
+
+            .product-info-row {
+                font-size: 14px;
+            }
+
+            .contact-store {
+                padding: 0 15px 50px;
+            }
+
+            .contact-store-content h2 {
+                font-size: 25px;
+            }
+
+            .social-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .social-button {
+                width: 100%;
             }
 
         }
@@ -464,28 +546,54 @@
 <body>
 
 
-    <!-- NAVIGATION -->
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
     <nav>
 
         <a href="index.html" class="logo">
-            SBSC<span>FC</span>
+            SBS<span>CFC</span>
         </a>
 
-               <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="fixtures.html">Fixtures</a></li>
-            <li><a href="teams.html#teams">Teams</a></li>
-            <li><a href="news.html#news">News</a></li>
-            <li><a href="charity.html#charity">Charity</a></li>
-            <li><a href="contact.html#contact">Contact</a></li>
-            <li><a href="store.html#store">Club Store</a></li>
+        <ul>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="fixtures.html">Fixtures</a>
+            </li>
+
+            <li>
+                <a href="teams.html#teams">Teams</a>
+            </li>
+
+            <li>
+                <a href="news.html#news">News</a>
+            </li>
+
+            <li>
+                <a href="charity.html#charity">Charity</a>
+            </li>
+
+            <li>
+                <a href="contact.html#contact">Contact</a>
+            </li>
+
+            <li>
+                <a href="store.html#store">Club Store</a>
+            </li>
+
         </ul>
 
     </nav>
 
 
-    <!-- PAGE HEADER -->
+    <!-- =========================
+         PAGE HEADER
+    ========================= -->
 
     <section class="page-header">
 
@@ -504,7 +612,9 @@
     </section>
 
 
-    <!-- PRODUCT -->
+    <!-- =========================
+         PRODUCT
+    ========================= -->
 
     <main class="product-container">
 
@@ -540,8 +650,7 @@
                 </div>
 
                 <p class="product-description">
-                    The official South Benfleet Social Club FC
-                    home kit.
+                    The official South Benfleet Social Club FC home kit.
                 </p>
 
 
@@ -559,6 +668,7 @@
 
                     </div>
 
+
                     <div class="product-info-row">
 
                         <strong>
@@ -570,6 +680,7 @@
                         </span>
 
                     </div>
+
 
                     <div class="product-info-row">
 
@@ -586,23 +697,83 @@
                 </div>
 
 
-         <button class="order-button" onclick="openOrderPopup()">
-           Order Now
-         </button>
+                <!-- ORDER BUTTON -->
 
-                <a href="store.html" class="back-to-store">
+                <a
+                    href="#contact-us"
+                    class="order-button"
+                >
+                    Order Now
+                </a>
+
+
+                <!-- BACK TO STORE -->
+
+                <a
+                    href="store.html"
+                    class="back-to-store"
+                >
                     ← Back to Club Store
                 </a>
 
             </div>
 
-
         </div>
+
+
+        <!-- =========================
+             CONTACT US
+        ========================= -->
+
+        <section
+            id="contact-us"
+            class="contact-store"
+        >
+
+            <div class="contact-store-content">
+
+                <h2>
+                    Interested in purchasing?
+                </h2>
+
+                <p>
+                    If you are interested in purchasing anything from our store,
+                    please contact us through Facebook or Instagram.
+                </p>
+
+                <div class="social-links">
+
+                    <a
+                        href="https://www.facebook.com/profile.php?id=61593122416466"
+                        target="_blank"
+                        rel="noopener"
+                        class="social-button facebook"
+                    >
+                        Facebook
+                    </a>
+
+
+                    <a
+                        href="https://www.instagram.com/southbenfleetsocialclubfc"
+                        target="_blank"
+                        rel="noopener"
+                        class="social-button instagram"
+                    >
+                        Instagram
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
 
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
 
@@ -620,62 +791,8 @@
         </p>
 
     </footer>
-    
-<!-- ORDER POPUP -->
 
-<div id="orderPopup" class="order-popup">
 
-    <div class="order-popup-content">
-
-<button type="button" class="close-popup" onclick="closeOrderPopup()">
-    &times;
-</button>
-
-        <h2>
-            Interested in purchasing?
-        </h2>
-
-        <p>
-            If you are interested in purchasing anything from our store,
-            please contact us via Facebook or Instagram.
-        </p>
-
-        <div class="social-links">
-
-            <a
-                href="https://www.facebook.com/profile.php?id=61593122416466"
-                target="_blank"
-                rel="noopener"
-                class="social-button facebook"
-            >
-                Facebook
-            </a>
-
-            <a
-                href="https://www.instagram.com/southbenfleetsocialclubfc"
-                target="_blank"
-                rel="noopener"
-                class="social-button instagram"
-            >
-                Instagram
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-<script>
-
-    function openOrderPopup() {
-        document.getElementById("orderPopup").style.display = "flex";
-    }
-
-    function closeOrderPopup() {
-        document.getElementById("orderPopup").style.display = "none";
-    }
-
-</script>
 </body>
 
 </html>
