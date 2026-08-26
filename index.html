@@ -41,6 +41,7 @@
         nav {
             background: var(--navy);
             color: white;
+
             padding: 18px 6%;
 
             display: flex;
@@ -611,6 +612,169 @@
 
 
         /* =========================
+           LATEST FROM SBSCFC
+        ========================= */
+
+        .latest-news {
+            background: var(--light);
+        }
+
+        .latest-news-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+        }
+
+        .latest-news-card {
+            background: white;
+
+            border-radius: 16px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 25px rgba(7, 26, 61, 0.08);
+
+            border: 1px solid #e3ebf5;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .latest-news-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 14px 32px rgba(7, 26, 61, 0.14);
+        }
+
+        .latest-news-image {
+            width: 100%;
+
+            height: 220px;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #edf3fa,
+                    #f8fafc
+                );
+        }
+
+        .latest-news-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition:
+                transform 0.3s ease;
+        }
+
+        .latest-news-card:hover
+        .latest-news-image img {
+            transform: scale(1.04);
+        }
+
+        .latest-news-content {
+            padding: 25px;
+        }
+
+        .latest-news-tag {
+            display: inline-block;
+
+            color: var(--blue);
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+        .latest-news-content h3 {
+            color: var(--navy);
+
+            font-size: 23px;
+
+            line-height: 1.25;
+
+            margin-bottom: 10px;
+        }
+
+        .latest-news-content p {
+            color: #667085;
+
+            font-size: 15px;
+
+            margin-bottom: 20px;
+        }
+
+        .latest-news-link {
+            display: inline-block;
+
+            color: var(--navy);
+
+            text-decoration: none;
+
+            font-weight: 800;
+
+            font-size: 14px;
+        }
+
+        .latest-news-link:hover {
+            color: var(--blue);
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: var(--navy);
+
+            color: white;
+        }
+
+        .about-container {
+            max-width: 1000px;
+
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 42px;
+
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 18px;
+
+            color: #d7e5f7;
+        }
+
+
+        /* =========================
            CARDS
         ========================= */
 
@@ -660,37 +824,6 @@
 
         .card p {
             color: #667085;
-        }
-
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about {
-            background: var(--navy);
-
-            color: white;
-        }
-
-        .about-container {
-            max-width: 1000px;
-
-            margin: auto;
-
-            text-align: center;
-        }
-
-        .about h2 {
-            font-size: 42px;
-
-            margin-bottom: 20px;
-        }
-
-        .about p {
-            font-size: 18px;
-
-            color: #d7e5f7;
         }
 
 
@@ -881,6 +1014,14 @@
                 grid-template-columns: 1fr;
             }
 
+            .latest-news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .latest-news-image {
+                height: 240px;
+            }
+
             .match-card {
                 padding: 30px 20px;
             }
@@ -975,38 +1116,56 @@
 
     <nav>
 
-        <a href="index.html" class="logo">
+        <a
+            href="index.html"
+            class="logo"
+        >
             SBSC<span>FC</span>
         </a>
+
 
         <ul>
 
             <li>
-                <a href="index.html">Home</a>
+                <a href="index.html">
+                    Home
+                </a>
             </li>
 
             <li>
-                <a href="fixtures.html">Fixtures</a>
+                <a href="fixtures.html">
+                    Fixtures
+                </a>
             </li>
 
             <li>
-                <a href="teams.html">Teams</a>
+                <a href="teams.html">
+                    Teams
+                </a>
             </li>
 
             <li>
-                <a href="news.html">News</a>
+                <a href="news.html">
+                    News
+                </a>
             </li>
 
             <li>
-                <a href="charity.html">Charity</a>
+                <a href="charity.html">
+                    Charity
+                </a>
             </li>
 
             <li>
-                <a href="contact.html">Contact</a>
+                <a href="contact.html">
+                    Contact
+                </a>
             </li>
 
             <li>
-                <a href="store.html">Club Store</a>
+                <a href="store.html">
+                    Club Store
+                </a>
             </li>
 
         </ul>
@@ -1018,9 +1177,13 @@
          HERO
     ========================= -->
 
-    <section class="hero" id="home">
+    <section
+        class="hero"
+        id="home"
+    >
 
         <div class="hero-content">
+
 
             <div class="badge">
 
@@ -1033,8 +1196,13 @@
 
 
             <h1>
+
                 SOUTH BENFLEET<br>
-                <span>SOCIAL CLUB FC</span>
+
+                <span>
+                    SOCIAL CLUB FC
+                </span>
+
             </h1>
 
 
@@ -1057,6 +1225,7 @@
             >
                 OUR STORY
             </a>
+
 
         </div>
 
@@ -1304,6 +1473,7 @@
 
             <div class="match-info next-match-info">
 
+
                 <div class="fixture-date">
 
                     <span>
@@ -1342,7 +1512,173 @@
                     Match Information
                 </a>
 
+
             </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LATEST FROM SBSCFC
+    ========================= -->
+
+    <section class="latest-news">
+
+        <div class="section-title">
+
+            <h2>
+                Latest From SBSCFC
+            </h2>
+
+            <p>
+                The latest news, updates and things happening around the club.
+            </p>
+
+        </div>
+
+
+        <div class="latest-news-grid">
+
+
+            <!-- MATCH REPORT -->
+
+            <article class="latest-news-card">
+
+
+                <div class="latest-news-image">
+
+                    <img
+                        src="charity%20match%20promo.jpeg"
+                        alt="South Benfleet Social Club FC charity match"
+                    >
+
+                </div>
+
+
+                <div class="latest-news-content">
+
+                    <span class="latest-news-tag">
+                        Match Report
+                    </span>
+
+
+                    <h3>
+                        SBSCFC 1–3 Wickford Town Reserves
+                    </h3>
+
+
+                    <p>
+                        Read about our charity match against
+                        Wickford Town Reserves and see how the
+                        game unfolded.
+                    </p>
+
+
+                    <a
+                        href="match-report-wickford.html"
+                        class="latest-news-link"
+                    >
+                        Read Match Report →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- CLUB STORE -->
+
+            <article class="latest-news-card">
+
+
+                <div class="latest-news-image">
+
+                    <img
+                        src="homekit.png.png"
+                        alt="South Benfleet Social Club FC Home Kit"
+                    >
+
+                </div>
+
+
+                <div class="latest-news-content">
+
+                    <span class="latest-news-tag">
+                        Club Store
+                    </span>
+
+
+                    <h3>
+                        Official Club Store Now Open
+                    </h3>
+
+
+                    <p>
+                        Explore the official SBSCFC range,
+                        including kits, training wear and
+                        club merchandise.
+                    </p>
+
+
+                    <a
+                        href="store.html"
+                        class="latest-news-link"
+                    >
+                        Visit Club Store →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- NEXT FIXTURE -->
+
+            <article class="latest-news-card">
+
+
+                <div class="latest-news-image">
+
+                    <img
+                        src="WhatsApp%20Image%202026-08-19%20at%2009.48.59.jpeg"
+                        alt="South Benfleet Social Club FC squad"
+                    >
+
+                </div>
+
+
+                <div class="latest-news-content">
+
+                    <span class="latest-news-tag">
+                        Next Fixture
+                    </span>
+
+
+                    <h3>
+                        Next Match Confirmed
+                    </h3>
+
+
+                    <p>
+                        Old Southendians Vets host
+                        South Benfleet Social Club FC
+                        on Sunday 6th September.
+                    </p>
+
+
+                    <a
+                        href="match-information.html"
+                        class="latest-news-link"
+                    >
+                        Match Information →
+                    </a>
+
+                </div>
+
+            </article>
+
 
         </div>
 
@@ -1359,6 +1695,7 @@
     >
 
         <div class="about-container">
+
 
             <h2>
                 More Than A Football Club.
@@ -1385,6 +1722,7 @@
                 of the journey.
 
             </p>
+
 
         </div>
 
@@ -1429,9 +1767,8 @@
 
                 <p>
 
-                    Get your official
-                    South Benfleet Social Club FC
-                    clothing and merchandise.
+                    Get your official South Benfleet
+                    Social Club FC clothing and merchandise.
 
                 </p>
 
@@ -1495,9 +1832,8 @@
 
                 <p>
 
-                    Find out about the causes
-                    we support and our upcoming
-                    charity work.
+                    Find out about the causes we support
+                    and our upcoming charity work.
 
                 </p>
 
@@ -1541,6 +1877,7 @@
 
         <div class="match-card">
 
+
             <h3>
                 Follow The Journey
             </h3>
@@ -1553,8 +1890,6 @@
 
             </p>
 
-
-            <!-- CLICKABLE SOCIAL MEDIA LOGOS -->
 
             <div class="social-icons">
 
@@ -1606,8 +1941,6 @@
 
     <footer>
 
-
-        <!-- SPONSORS & PARTNERS -->
 
         <div class="footer-partners">
 
