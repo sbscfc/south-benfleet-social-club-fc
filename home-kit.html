@@ -627,9 +627,9 @@
 
     <div class="order-popup-content">
 
-        <button class="close-popup" onclick="closeOrderPopup()">
-            &times;
-        </button>
+<button type="button" class="close-popup" onclick="closeOrderPopup()">
+    &times;
+</button>
 
         <h2>
             Interested in purchasing?
@@ -668,22 +668,12 @@
 <script>
 
     function openOrderPopup() {
-        document.getElementById("orderPopup").classList.add("active");
+        document.getElementById("orderPopup").style.display = "flex";
     }
 
     function closeOrderPopup() {
-        document.getElementById("orderPopup").classList.remove("active");
+        document.getElementById("orderPopup").style.display = "none";
     }
-
-    window.addEventListener("click", function(event) {
-
-        const popup = document.getElementById("orderPopup");
-
-        if (event.target === popup) {
-            closeOrderPopup();
-        }
-
-    });
 
 </script>
 </body>
