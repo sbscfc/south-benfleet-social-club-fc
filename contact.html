@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -23,6 +24,11 @@
             --light: #f4f7fb;
             --dark: #101828;
             --grey: #52627a;
+            --border: #e3ebf5;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -32,15 +38,23 @@
             line-height: 1.6;
         }
 
-        /* NAVIGATION */
+
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
             background: var(--navy);
             color: white;
             padding: 20px 5%;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .logo {
@@ -56,8 +70,12 @@
 
         nav ul {
             list-style: none;
+
             display: flex;
             gap: 28px;
+
+            margin: 0;
+            padding: 0;
         }
 
         nav ul li a {
@@ -70,12 +88,22 @@
             color: var(--light-blue);
         }
 
-        /* HERO */
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
-            background: var(--navy);
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--navy),
+                    #0d2b5c
+                );
+
             color: white;
             text-align: center;
+
             padding: 80px 20px;
         }
 
@@ -93,31 +121,99 @@
             color: #dcecff;
         }
 
-        /* CONTENT */
+
+        /* =========================
+           CONTENT
+        ========================= */
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
+
             padding: 70px 5%;
         }
 
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-columns:
+                minmax(0, 1.1fr)
+                minmax(0, 0.9fr);
+
             gap: 30px;
+
+            align-items: stretch;
         }
+
+
+        /* =========================
+           ENTERTAINMENT CARD
+        ========================= */
+
+        .entertainment-card {
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 8px 25px rgba(7, 26, 61, 0.08);
+
+            border: 1px solid var(--border);
+
+            border-top: 5px solid var(--blue);
+        }
+
+        .entertainment-card h2 {
+            color: var(--navy);
+
+            font-size: 26px;
+
+            margin-bottom: 18px;
+
+            text-align: center;
+        }
+
+        .entertainment-card h2 span {
+            color: var(--blue);
+        }
+
+        .entertainment-image {
+            width: 100%;
+
+            display: block;
+
+            border-radius: 10px;
+
+            height: auto;
+
+            object-fit: contain;
+        }
+
+
+        /* =========================
+           CONTACT CARD
+        ========================= */
 
         .contact-card {
             background: white;
+
             padding: 35px;
+
             border-radius: 16px;
-            box-shadow: 0 8px 25px rgba(7, 26, 61, 0.08);
-            border: 1px solid #e3ebf5;
+
+            box-shadow:
+                0 8px 25px rgba(7, 26, 61, 0.08);
+
+            border: 1px solid var(--border);
         }
 
         .contact-card h2 {
             color: var(--navy);
+
             font-size: 26px;
+
             margin-bottom: 20px;
         }
 
@@ -127,19 +223,24 @@
 
         .contact-card h3 {
             color: var(--navy);
+
             margin-top: 25px;
             margin-bottom: 8px;
         }
 
         .contact-card p {
             color: var(--grey);
+
             margin-bottom: 8px;
         }
 
         .phone {
             color: var(--navy);
+
             font-size: 20px;
+
             font-weight: 700;
+
             text-decoration: none;
         }
 
@@ -147,46 +248,63 @@
             color: var(--blue);
         }
 
-        /* SOCIAL LINKS */
+        .fc-card {
+            border-top: 5px solid var(--navy);
+        }
+
+
+        /* =========================
+           SOCIAL LINKS
+        ========================= */
 
         .social-links {
             display: flex;
+
             gap: 12px;
+
             flex-wrap: wrap;
+
             margin-top: 15px;
         }
 
         .social-links a {
             display: inline-block;
+
             padding: 11px 18px;
+
             background: var(--navy);
+
             color: white;
+
             text-decoration: none;
+
             border-radius: 8px;
+
             font-weight: 700;
+
             transition: 0.2s ease;
         }
 
         .social-links a:hover {
             background: var(--blue);
+
             transform: translateY(-2px);
         }
 
-        .fc-card {
-            border-top: 5px solid var(--blue);
-        }
 
-        .club-card {
-            border-top: 5px solid var(--navy);
-        }
-
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             background: var(--navy);
+
             color: #dcecff;
+
             text-align: center;
+
             padding: 30px 20px;
+
             margin-top: 20px;
         }
 
@@ -194,18 +312,24 @@
             font-size: 13px;
         }
 
-        /* MOBILE */
+
+        /* =========================
+           TABLET / MOBILE
+        ========================= */
 
         @media (max-width: 800px) {
 
             nav {
                 flex-direction: column;
+
                 gap: 15px;
             }
 
             nav ul {
                 gap: 15px;
+
                 flex-wrap: wrap;
+
                 justify-content: center;
             }
 
@@ -217,12 +341,85 @@
                 font-size: 38px;
             }
 
+            .container {
+                padding: 50px 20px;
+            }
+
             .contact-grid {
                 grid-template-columns: 1fr;
+
+                gap: 25px;
+            }
+
+            .entertainment-card {
+                padding: 20px;
+            }
+
+            .contact-card {
+                padding: 30px 25px;
+            }
+
+        }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 500px) {
+
+            nav {
+                padding: 16px 15px;
+            }
+
+            nav ul {
+                gap: 10px;
+            }
+
+            nav ul li a {
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 50px 15px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 16px;
             }
 
             .container {
-                padding: 50px 20px;
+                padding: 35px 15px 50px;
+            }
+
+            .entertainment-card {
+                padding: 15px;
+            }
+
+            .entertainment-card h2 {
+                font-size: 23px;
+            }
+
+            .contact-card {
+                padding: 25px 20px;
+            }
+
+            .contact-card h2 {
+                font-size: 23px;
+            }
+
+            .social-links {
+                flex-direction: column;
+            }
+
+            .social-links a {
+                text-align: center;
+
+                width: 100%;
             }
 
         }
@@ -231,9 +428,13 @@
 
 </head>
 
+
 <body>
 
-    <!-- NAVIGATION -->
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
     <nav>
 
@@ -242,19 +443,43 @@
         </a>
 
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="fixtures.html">Fixtures</a></li>
-            <li><a href="teams.html#teams">Teams</a></li>
-            <li><a href="news.html#news">News</a></li>
-            <li><a href="charity.html#charity">Charity</a></li>
-            <li><a href="contact.html#contact">Contact</a></li>
-            <li><a href="store.html#store">Club Store</a></li>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="fixtures.html">Fixtures</a>
+            </li>
+
+            <li>
+                <a href="teams.html#teams">Teams</a>
+            </li>
+
+            <li>
+                <a href="news.html#news">News</a>
+            </li>
+
+            <li>
+                <a href="charity.html#charity">Charity</a>
+            </li>
+
+            <li>
+                <a href="contact.html#contact">Contact</a>
+            </li>
+
+            <li>
+                <a href="store.html#store">Club Store</a>
+            </li>
+
         </ul>
 
     </nav>
 
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <section class="hero">
 
@@ -269,62 +494,40 @@
     </section>
 
 
-    <!-- CONTACT CONTENT -->
+    <!-- =========================
+         CONTACT CONTENT
+    ========================= -->
 
-    <main class="container">
+    <main
+        class="container"
+        id="contact"
+    >
 
         <div class="contact-grid">
 
 
-            <!-- SOUTH BENFLEET SOCIAL CLUB -->
+            <!-- =========================
+                 ENTERTAINMENT
+            ========================= -->
 
-            <div class="contact-card club-card">
+            <div class="entertainment-card">
 
                 <h2>
-                    South Benfleet Social <span>Club</span>
+                    What's On <span>at the Club</span>
                 </h2>
 
-                <p>
-                    Our home club and the community behind South Benfleet Social Club FC.
-                </p>
-
-                <h3>Address</h3>
-
-                <p>
-                    8 Vicarage Hill<br>
-                    South Benfleet<br>
-                    Benfleet<br>
-                    SS7 1PB
-                </p>
-
-                <h3>Telephone</h3>
-
-                <p>
-                    <a href="tel:01268206159" class="phone">
-                        01268 206159
-                    </a>
-                </p>
-
-                <h3>South Benfleet Social Club Socials</h3>
-
-                <div class="social-links">
-
-                    <a href="https://www.facebook.com/p/The-South-Benfleet-Social-Club-61559286764633/"
-                       target="_blank">
-                        Facebook
-                    </a>
-
-                    <a href="https://www.instagram.com/southbenfleetsocialclub"
-                       target="_blank">
-                        Instagram
-                    </a>
-
-                </div>
+                <img
+                    src="whatsonsbsc.png"
+                    alt="What's On at South Benfleet Social Club"
+                    class="entertainment-image"
+                >
 
             </div>
 
 
-            <!-- SOUTH BENFLEET SOCIAL CLUB FC -->
+            <!-- =========================
+                 SOUTH BENFLEET SOCIAL CLUB FC
+            ========================= -->
 
             <div class="contact-card fc-card">
 
@@ -333,27 +536,39 @@
                 </h2>
 
                 <p>
-                    For football-related enquiries, fixtures, charity matches and
-                    everything involving South Benfleet Social Club FC.
+                    For football-related enquiries, fixtures, charity matches
+                    and everything involving South Benfleet Social Club FC.
                 </p>
 
-                <h3>Home Ground</h3>
+
+                <h3>
+                    Home Ground
+                </h3>
 
                 <p>
                     <strong>TBC</strong>
                 </p>
 
-                <h3>South Benfleet Social Club FC Socials</h3>
+
+                <h3>
+                    South Benfleet Social Club FC Socials
+                </h3>
 
                 <div class="social-links">
 
-                    <a href="https://www.facebook.com/profile.php?id=61593122416466"
-                       target="_blank">
+                    <a
+                        href="https://www.facebook.com/profile.php?id=61593122416466"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Facebook
                     </a>
 
-                    <a href="https://www.instagram.com/southbenfleetsocialclubfc"
-                       target="_blank">
+                    <a
+                        href="https://www.instagram.com/southbenfleetsocialclubfc"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Instagram
                     </a>
 
@@ -367,15 +582,19 @@
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
 
         <p>
-            © 2026 South Benfleet Social Club FC. Football. Community. Charity.
+            © 2026 South Benfleet Social Club FC.
+            Football. Community. Charity.
         </p>
 
     </footer>
+
 
 </body>
 
