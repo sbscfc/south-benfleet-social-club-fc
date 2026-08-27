@@ -27,11 +27,21 @@
             --grey: #52627a;
         }
 
+        html {
+            overflow-x: hidden;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: var(--light);
             color: var(--dark);
             line-height: 1.7;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        img {
+            max-width: 100%;
         }
 
         /* NAVIGATION */
@@ -46,6 +56,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            width: 100%;
         }
 
         .logo {
@@ -87,6 +98,7 @@
             color: white;
             text-align: center;
             padding: 90px 20px 80px;
+            width: 100%;
         }
 
         .page-label {
@@ -121,6 +133,7 @@
 
         .charity-container {
             max-width: 1100px;
+            width: 100%;
             margin: 0 auto;
             padding: 75px 20px;
         }
@@ -131,6 +144,9 @@
             border-radius: 16px;
             margin-bottom: 35px;
             box-shadow: 0 8px 30px rgba(7,26,61,0.08);
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
         }
 
         .charity-section h2 {
@@ -138,6 +154,7 @@
             font-size: 32px;
             font-weight: 900;
             margin-bottom: 20px;
+            overflow-wrap: break-word;
         }
 
         .charity-section h2 span {
@@ -148,6 +165,7 @@
             color: var(--grey);
             font-size: 17px;
             margin-bottom: 18px;
+            overflow-wrap: break-word;
         }
 
         /* INTRO */
@@ -189,6 +207,7 @@
             font-size: 38px;
             font-weight: 900;
             margin: 15px 0 10px;
+            overflow-wrap: break-word;
         }
 
         .amount {
@@ -238,12 +257,16 @@
             border-radius: 14px;
             padding: 35px 20px;
             margin-top: 25px;
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
         }
 
         .match-teams h3 {
             font-size: 30px;
             line-height: 1.25;
             margin-bottom: 12px;
+            overflow-wrap: break-word;
         }
 
         .match-teams .vs {
@@ -261,6 +284,10 @@
             flex-wrap: wrap;
         }
 
+        .match-detail {
+            max-width: 100%;
+        }
+
         .match-detail strong {
             display: block;
             color: var(--light-blue);
@@ -273,6 +300,7 @@
         .match-detail span {
             color: #dcecff;
             font-size: 15px;
+            overflow-wrap: break-word;
         }
 
         /* CHARITIES */
@@ -289,57 +317,71 @@
             border: 1px solid #e3ebf5;
             border-radius: 14px;
             padding: 30px;
-        } /* CHARITIES WORKED WITH */
+        }
 
-.charity-worked {
-    display: flex;
-    align-items: center;
-    gap: 35px;
-    background: var(--light);
-    border: 1px solid #e3ebf5;
-    border-radius: 16px;
-    padding: 30px;
-    margin-top: 30px;
-}
+        /* CHARITIES WORKED WITH */
 
-.charity-logo {
-    width: 170px;
-    height: 170px;
-    flex-shrink: 0;
-    background: white;
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 18px;
-}
+        .charity-worked {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            background: var(--light);
+            border: 1px solid #e3ebf5;
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 30px;
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+        }
 
-.charity-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
+        .charity-logo {
+            width: 170px;
+            height: 170px;
+            flex: 0 0 170px;
+            background: white;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+        }
 
-.charity-worked-info h3 {
-    color: var(--navy);
-    font-size: 30px;
-    margin-bottom: 10px;
-}
+        .charity-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
 
-.charity-worked-info p {
-    color: var(--grey);
-    font-size: 16px;
-    margin-bottom: 0;
-}
+        .charity-worked-info {
+            min-width: 0;
+            flex: 1;
+        }
 
-.charity-worked-info .status {
-    color: var(--blue);
-    font-size: 12px;
-    font-weight: 900;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-}
+        .charity-worked-info h3 {
+            color: var(--navy);
+            font-size: 30px;
+            margin-bottom: 10px;
+            overflow-wrap: break-word;
+        }
+
+        .charity-worked-info p {
+            color: var(--grey);
+            font-size: 16px;
+            margin-bottom: 0;
+            overflow-wrap: break-word;
+        }
+
+        .charity-worked-info .status {
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            overflow-wrap: break-word;
+        }
 
         .charity-card h3 {
             color: var(--navy);
@@ -382,6 +424,7 @@
             font-size: 30px;
             font-weight: 900;
             margin: 20px 0;
+            overflow-wrap: break-word;
         }
 
         /* BUTTON */
@@ -395,6 +438,7 @@
             border-radius: 8px;
             font-weight: 800;
             margin-top: 25px;
+            max-width: 100%;
         }
 
         .button:hover {
@@ -415,6 +459,8 @@
             color: white;
             padding: 50px 6% 25px;
             text-align: center;
+            width: 100%;
+            overflow: hidden;
         }
 
         footer h3 {
@@ -440,6 +486,7 @@
             nav {
                 flex-direction: column;
                 gap: 15px;
+                padding: 18px 15px;
             }
 
             nav ul {
@@ -448,16 +495,50 @@
                 justify-content: center;
             }
 
+            nav a {
+                font-size: 14px;
+            }
+
             .page-header {
                 padding: 70px 20px;
             }
 
+            .page-header h1 {
+                font-size: clamp(36px, 10vw, 55px);
+                letter-spacing: -1px;
+            }
+
+            .page-header p {
+                font-size: 17px;
+            }
+
+            .charity-container {
+                padding: 45px 15px;
+            }
+
             .charity-section {
                 padding: 30px 20px;
+                margin-bottom: 25px;
+            }
+
+            .charity-section h2 {
+                font-size: 28px;
+            }
+
+            .intro h2 {
+                font-size: 30px;
+            }
+
+            .intro .motto {
+                font-size: 21px;
             }
 
             .charity-name {
                 font-size: 30px;
+            }
+
+            .match-teams {
+                padding: 30px 15px;
             }
 
             .match-teams h3 {
@@ -469,8 +550,104 @@
                 gap: 18px;
             }
 
+            .match-detail {
+                width: 100%;
+            }
+
             .charity-grid {
                 grid-template-columns: 1fr;
+            }
+
+            /* MOBILE CHARITY CARDS */
+
+            .charity-worked {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .charity-logo {
+                width: 140px;
+                height: 140px;
+                flex: 0 0 140px;
+                padding: 15px;
+            }
+
+            .charity-worked-info {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .charity-worked-info h3 {
+                font-size: 26px;
+                line-height: 1.25;
+            }
+
+            .charity-worked-info p {
+                font-size: 15px;
+                line-height: 1.6;
+            }
+
+            .charity-worked-info .status {
+                font-size: 11px;
+                line-height: 1.5;
+            }
+
+            .future-highlight {
+                font-size: 24px;
+                line-height: 1.25;
+            }
+
+            .button {
+                padding: 13px 20px;
+                font-size: 14px;
+            }
+
+            footer {
+                padding: 40px 20px 25px;
+            }
+
+        }
+
+        /* SMALL PHONES */
+
+        @media (max-width: 400px) {
+
+            nav ul {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .charity-container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .charity-section {
+                padding: 25px 15px;
+            }
+
+            .charity-worked {
+                padding: 18px 15px;
+            }
+
+            .charity-logo {
+                width: 125px;
+                height: 125px;
+                flex-basis: 125px;
+            }
+
+            .charity-worked-info h3 {
+                font-size: 23px;
+            }
+
+            .future-highlight {
+                font-size: 21px;
             }
 
         }
@@ -490,7 +667,7 @@
             SBSC<span>FC</span>
         </a>
 
-               <ul>
+        <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="fixtures.html">Fixtures</a></li>
             <li><a href="teams.html#teams">Teams</a></li>
@@ -499,6 +676,7 @@
             <li><a href="contact.html#contact">Contact</a></li>
             <li><a href="store.html#store">Club Store</a></li>
         </ul>
+
     </nav>
 
 
@@ -606,7 +784,6 @@
             </div>
 
             <p>
-               
             </p>
 
             <div class="match-teams">
@@ -687,65 +864,68 @@
                 continues to support more worthwhile causes.
             </p>
 
+
             <div class="charity-worked">
 
-    <div class="charity-logo">
+                <div class="charity-logo">
 
-        <img
-            src="58d59a20-4d58-46c9-8316-904773cfa0b6.jpg"
-            alt="St Luke's Hospice"
-        >
+                    <img
+                        src="58d59a20-4d58-46c9-8316-904773cfa0b6.jpg"
+                        alt="St Luke's Hospice"
+                    >
 
-    </div>
+                </div>
 
-    <div class="charity-worked-info">
+                <div class="charity-worked-info">
 
-        <div class="status">
-            JULY 2026
-        </div>
+                    <div class="status">
+                        JULY 2026
+                    </div>
 
-        <h3>
-            St Luke's Hospice
-        </h3>
+                    <h3>
+                        St Luke's Hospice
+                    </h3>
 
-        <p>
-            Supported through our inaugural charity match
-            against Wickford Town Reserves FC.
-        </p>
+                    <p>
+                        Supported through our inaugural charity match
+                        against Wickford Town Reserves FC.
+                    </p>
 
-    </div>
+                </div>
 
-</div>
-<div class="charity-worked">
+            </div>
 
-    <div class="charity-logo">
 
-        <img
-            src="a9f2ac1e-6b1c-47e1-8df3-d330956a5e2c.jpg"
-            alt="Benfleet First Responders"
-        >
+            <div class="charity-worked">
 
-    </div>
+                <div class="charity-logo">
 
-    <div class="charity-worked-info">
+                    <img
+                        src="a9f2ac1e-6b1c-47e1-8df3-d330956a5e2c.jpg"
+                        alt="Benfleet First Responders"
+                    >
 
-        <div class="status">
-            SEPTEMBER 2026 — UPCOMING
-        </div>
+                </div>
 
-        <h3>
-            Benfleet First Responders
-        </h3>
+                <div class="charity-worked-info">
 
-        <p>
-            Our next charity match against Old Southendians Vets
-            will be played in support of Benfleet First Responders.
-        </p>
+                    <div class="status">
+                        SEPTEMBER 2026 — UPCOMING
+                    </div>
 
-    </div>
+                    <h3>
+                        Benfleet First Responders
+                    </h3>
 
-</div>
-            
+                    <p>
+                        Our next charity match against Old Southendians Vets
+                        will be played in support of Benfleet First Responders.
+                    </p>
+
+                </div>
+
+            </div>
+
         </section>
 
 
