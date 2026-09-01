@@ -27,31 +27,35 @@
             --grey: #52627a;
         }
 
+        html {
+            overflow-x: hidden;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: var(--light);
             color: var(--dark);
             line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+
+            background:
+                linear-gradient(
+                    rgba(244, 247, 251, 0.68),
+                    rgba(244, 247, 251, 0.68)
+                ),
+                url("WhatsApp Image 2026-08-19 at 09.48.59.jpeg");
+
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
         }
-/* SQUAD PHOTO BACKGROUND */
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--dark);
-    line-height: 1.6;
+        img {
+            max-width: 100%;
+        }
 
-    background:
-        linear-gradient(
-            rgba(244, 247, 251, 0.55),
-            rgba(244, 247, 251, 0.55)
-        ),
-        url("WhatsApp Image 2026-08-19 at 09.48.59.jpeg");
 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
         /* NAVIGATION */
 
         nav {
@@ -64,6 +68,7 @@ body {
             position: sticky;
             top: 0;
             z-index: 1000;
+            width: 100%;
         }
 
         .logo {
@@ -95,16 +100,25 @@ body {
             color: var(--light-blue);
         }
 
+
         /* PAGE HEADER */
 
         .page-header {
             background:
-                linear-gradient(rgba(7,26,61,0.96), rgba(7,26,61,0.96)),
-                radial-gradient(circle at center, #174985, #071a3d);
+                linear-gradient(
+                    rgba(7,26,61,0.96),
+                    rgba(7,26,61,0.96)
+                ),
+                radial-gradient(
+                    circle at center,
+                    #174985,
+                    #071a3d
+                );
 
             color: white;
             text-align: center;
             padding: 90px 20px 80px;
+            width: 100%;
         }
 
         .page-label {
@@ -135,10 +149,12 @@ body {
             font-size: 20px;
         }
 
+
         /* SQUAD */
 
         .squad-container {
             max-width: 1200px;
+            width: 100%;
             margin: 0 auto;
             padding: 75px 20px;
         }
@@ -165,136 +181,147 @@ body {
             font-size: 17px;
         }
 
+
         /* PLAYER GRID */
 
         .player-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
+            width: 100%;
         }
 
-.player-card {
-    background: white;
-    border-radius: 16px;
-    padding: 28px 20px 24px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(7,26,61,0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border: 1px solid #e3ebf5;
-    position: relative;
-    overflow: hidden;
-} 
-/* STAFF */
-
-.staff-section {
-    max-width: 1100px;
-    margin: 70px auto 0;
-    padding: 0 20px 70px;
-}
-
-.staff-section .section-title {
-    margin-bottom: 35px;
-}
-
-.staff-section .section-title h2 {
-    color: var(--navy);
-}
-
-.staff-section .section-title p {
-    color: var(--grey);
-}
-
-.staff-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.staff-card {
-    background: rgba(255, 255, 255, 0.94);
-    border: 1px solid #e3ebf5;
-    border-top: 5px solid var(--navy);
-    border-radius: 16px;
-    padding: 28px 22px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(7, 26, 61, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.staff-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(7, 26, 61, 0.12);
-}
-
-.staff-card h3 {
-    color: var(--navy);
-    font-size: 21px;
-    font-weight: 900;
-    margin-bottom: 8px;
-}
-
-.staff-role {
-    color: var(--blue);
-    font-size: 13px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-.player-card::before {
-    content: "";
-    display: block;
-    height: 5px;
-    background: linear-gradient(90deg, var(--navy), var(--blue));
-    margin: -28px -20px 20px;
-}
+        .player-card {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 16px;
+            padding: 28px 20px 24px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(7,26,61,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid #e3ebf5;
+            position: relative;
+            overflow: hidden;
+            min-width: 0;
         }
 
-.player-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 14px 32px rgba(7,26,61,0.14);
-    border-color: #cfe3f7;
-}
-        
-.player-number {
-    position: absolute;
-    right: -5px;
-    bottom: -12px;
-    color: var(--navy);
-    opacity: 0.055;
-    font-size: 82px;
-    font-weight: 900;
-    line-height: 1;
-    letter-spacing: -4px;
-    margin: 0;
-    z-index: 0;
-}
-    
+        .player-card::before {
+            content: "";
+            display: block;
+            height: 5px;
+            background: linear-gradient(
+                90deg,
+                var(--navy),
+                var(--blue)
+            );
+            margin: -28px -20px 20px;
+        }
 
-.player-name {
-    position: relative;
-    z-index: 1;
-    color: var(--navy);
-    font-size: 21px;
-    font-weight: 900;
-    line-height: 1.2;
-}
- 
-.captain-badge {
-    position: relative;
-    z-index: 1;
-    display: inline-block;
-    margin-top: 12px;
-    padding: 5px 11px;
-    background: var(--navy);
-    color: var(--light-blue);
-    border-radius: 20px;
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-}
+        .player-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 32px rgba(7,26,61,0.14);
+            border-color: #cfe3f7;
+        }
 
-        
+        .player-number {
+            position: absolute;
+            right: -5px;
+            bottom: -12px;
+            color: var(--navy);
+            opacity: 0.055;
+            font-size: 82px;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -4px;
+            margin: 0;
+            z-index: 0;
+        }
+
+        .player-name {
+            position: relative;
+            z-index: 1;
+            color: var(--navy);
+            font-size: 21px;
+            font-weight: 900;
+            line-height: 1.2;
+            overflow-wrap: break-word;
+        }
+
+        .captain-badge {
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            margin-top: 12px;
+            padding: 5px 11px;
+            background: var(--navy);
+            color: var(--light-blue);
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+
+        /* STAFF */
+
+        .staff-section {
+            max-width: 1100px;
+            margin: 70px auto 0;
+            padding: 0 20px 70px;
+        }
+
+        .staff-section .section-title {
+            margin-bottom: 35px;
+        }
+
+        .staff-section .section-title h2 {
+            color: var(--navy);
+        }
+
+        .staff-section .section-title p {
+            color: var(--grey);
+        }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .staff-card {
+            background: rgba(255, 255, 255, 0.94);
+            border: 1px solid #e3ebf5;
+            border-top: 5px solid var(--navy);
+            border-radius: 16px;
+            padding: 28px 22px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(7, 26, 61, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            min-width: 0;
+        }
+
+        .staff-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(7, 26, 61, 0.12);
+        }
+
+        .staff-card h3 {
+            color: var(--navy);
+            font-size: 21px;
+            font-weight: 900;
+            margin-bottom: 8px;
+            overflow-wrap: break-word;
+        }
+
+        .staff-role {
+            color: var(--blue);
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            overflow-wrap: break-word;
+        }
+
 
         /* FUTURE PROFILE NOTE */
 
@@ -304,6 +331,7 @@ body {
             color: #71839d;
             font-size: 14px;
         }
+
 
         /* BACK BUTTON */
 
@@ -320,11 +348,13 @@ body {
             padding: 14px 28px;
             border-radius: 8px;
             font-weight: 800;
+            max-width: 100%;
         }
 
         .button:hover {
             background: #2f8fe8;
         }
+
 
         /* FOOTER */
 
@@ -333,6 +363,7 @@ body {
             color: white;
             padding: 50px 6% 25px;
             text-align: center;
+            width: 100%;
         }
 
         footer h3 {
@@ -351,7 +382,8 @@ body {
             font-size: 13px;
         }
 
-        /* MOBILE */
+
+        /* TABLET */
 
         @media (max-width: 950px) {
 
@@ -361,11 +393,25 @@ body {
 
         }
 
+
+        /* MOBILE */
+
         @media (max-width: 700px) {
+
+            body {
+                background-attachment: scroll;
+
+                background-size: auto 100vh;
+
+                background-position: center top;
+
+                background-repeat: no-repeat;
+            }
 
             nav {
                 flex-direction: column;
                 gap: 15px;
+                padding: 18px 15px;
             }
 
             nav ul {
@@ -373,25 +419,38 @@ body {
                 flex-wrap: wrap;
                 justify-content: center;
             }
-.staff-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-}
 
-.staff-card {
-    min-width: 0;
-    padding: 22px 12px;
-}
+            nav a {
+                font-size: 14px;
+            }
 
-.staff-card h3 {
-    font-size: 18px;
-}
-
-.staff-role {
-    font-size: 11px;
-}
             .page-header {
                 padding: 70px 20px;
+            }
+
+            .page-header h1 {
+                font-size: clamp(38px, 10vw, 58px);
+                letter-spacing: -1px;
+            }
+
+            .page-header p {
+                font-size: 17px;
+            }
+
+            .squad-container {
+                padding: 55px 15px;
+            }
+
+            .squad-intro {
+                margin-bottom: 35px;
+            }
+
+            .squad-intro h2 {
+                font-size: 29px;
+            }
+
+            .squad-intro p {
+                font-size: 16px;
             }
 
             .player-grid {
@@ -403,16 +462,79 @@ body {
                 padding: 24px 15px;
             }
 
+            .player-card::before {
+                margin: -24px -15px 18px;
+            }
+
             .player-name {
                 font-size: 18px;
             }
 
+            .player-number {
+                font-size: 68px;
+            }
+
+            .staff-section {
+                margin-top: 50px;
+                padding: 0 15px 55px;
+            }
+
+            .staff-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .staff-card {
+                padding: 22px 12px;
+            }
+
+            .staff-card h3 {
+                font-size: 18px;
+            }
+
+            .staff-role {
+                font-size: 11px;
+            }
+
+            footer {
+                padding: 40px 20px 25px;
+            }
+
         }
+
+
+        /* SMALL PHONES */
 
         @media (max-width: 450px) {
 
+            body {
+                background-size: auto 100vh;
+                background-position: center top;
+            }
+
             .player-grid {
                 grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .player-card {
+                padding: 25px 18px;
+            }
+
+            .player-card::before {
+                margin: -25px -18px 18px;
+            }
+
+            .player-name {
+                font-size: 20px;
+            }
+
+            .staff-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .staff-card {
+                padding: 24px 15px;
             }
 
         }
@@ -423,6 +545,7 @@ body {
 
 <body>
 
+
     <!-- NAVIGATION -->
 
     <nav>
@@ -431,7 +554,7 @@ body {
             SBSC<span>FC</span>
         </a>
 
-                <ul>
+        <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="fixtures.html">Fixtures</a></li>
             <li><a href="teams.html#teams">Teams</a></li>
@@ -440,6 +563,7 @@ body {
             <li><a href="contact.html#contact">Contact</a></li>
             <li><a href="store.html#store">Club Store</a></li>
         </ul>
+
     </nav>
 
 
@@ -482,30 +606,25 @@ body {
 
         <div class="player-grid">
 
-
             <div class="player-card">
                 <div class="player-number">01</div>
                 <div class="player-name">Craig Worham</div>
             </div>
-
 
             <div class="player-card">
                 <div class="player-number">02</div>
                 <div class="player-name">Tommy Occleshaw</div>
             </div>
 
-
             <div class="player-card">
                 <div class="player-number">03</div>
                 <div class="player-name">Ellis Warwick</div>
             </div>
 
-
             <div class="player-card">
                 <div class="player-number">04</div>
                 <div class="player-name">Sean Eames</div>
             </div>
-
 
             <div class="player-card">
                 <div class="player-number">05</div>
@@ -513,30 +632,25 @@ body {
                 <div class="captain-badge">Captain</div>
             </div>
 
-
             <div class="player-card">
                 <div class="player-number">06</div>
                 <div class="player-name">Lewis Rusz</div>
             </div>
-
 
             <div class="player-card">
                 <div class="player-number">07</div>
                 <div class="player-name">Ant Radden</div>
             </div>
 
-
             <div class="player-card">
                 <div class="player-number">08</div>
                 <div class="player-name">Harry Riley</div>
             </div>
 
-
             <div class="player-card">
                 <div class="player-number">09</div>
                 <div class="player-name">Chris Webb</div>
             </div>
-
 
             <div class="player-card">
                 <div class="player-number">10</div>
@@ -544,134 +658,132 @@ body {
             </div>
 
             <div class="player-card">
-    <div class="player-number">11</div>
-    <div class="player-name">Matt Walker</div>
-</div>
+                <div class="player-number">11</div>
+                <div class="player-name">Matt Walker</div>
+            </div>
 
-<div class="player-card">
-    <div class="player-number">12</div>
-    <div class="player-name">Francis</div>
-</div>
+            <div class="player-card">
+                <div class="player-number">12</div>
+                <div class="player-name">Francis</div>
+            </div>
 
             <div class="player-card">
                 <div class="player-number">13</div>
                 <div class="player-name">Dan Hales</div>
             </div>
 
-
             <div class="player-card">
                 <div class="player-number">14</div>
                 <div class="player-name">Tony Earnshaw</div>
             </div>
-
 
             <div class="player-card">
                 <div class="player-number">15</div>
                 <div class="player-name">Ray Stripe</div>
             </div>
 
-
             <div class="player-card">
                 <div class="player-number">16</div>
                 <div class="player-name">Kyle Pullinger</div>
             </div>
-
 
             <div class="player-card">
                 <div class="player-number">17</div>
                 <div class="player-name">James Bottomley</div>
             </div>
 
-
             <div class="player-card">
                 <div class="player-number">18</div>
                 <div class="player-name">Jack Martin-Kenny</div>
             </div>
-
 
             <div class="player-card">
                 <div class="player-number">19</div>
                 <div class="player-name">Callum Webb</div>
             </div>
 
-
             <div class="player-card">
                 <div class="player-number">20</div>
                 <div class="player-name">Terry Griffin</div>
             </div>
-
 
             <div class="player-card">
                 <div class="player-number">23</div>
                 <div class="player-name">Liam Barwick</div>
             </div>
 
-
             <div class="player-card">
                 <div class="player-number">24</div>
                 <div class="player-name">Tony Morgan</div>
             </div>
 
-
             <div class="player-card">
                 <div class="player-number">25</div>
                 <div class="player-name">Brandon Lee</div>
             </div>
-            
-<div class="player-card">
+
+            <div class="player-card">
                 <div class="player-number">37</div>
                 <div class="player-name">Michael Ticehurst</div>
-  </div>
-
-            
             </div>
 
-<!-- STAFF -->
-
-<section class="staff-section">
-
-    <div class="section-title">
-        <h2>Staff</h2>
-        <p>The people working behind the scenes at South Benfleet Social Club FC.</p>
-    </div>
-
-    <div class="staff-grid">
-
-        <div class="staff-card">
-            <h3>Tony Hoskins</h3>
-            <div class="staff-role">Manager</div>
         </div>
 
-        <div class="staff-card">
-            <h3>Ron Forrester</h3>
-            <div class="staff-role">Assistant Manager</div>
-        </div>
 
-        <div class="staff-card">
-            <h3>Dave Ince</h3>
-            <div class="staff-role">GK Coach</div>
-        </div>
+        <!-- STAFF -->
 
-        <div class="staff-card">
-            <h3>Mitch Stripe</h3>
-            <div class="staff-role">Coach</div>
-        </div>
+        <section class="staff-section">
 
-        <div class="staff-card">
-            <h3>Martin Pauling</h3>
-            <div class="staff-role">Club Treasurer</div>
-        </div>
+            <div class="section-title">
 
-        <div class="staff-card">
-            <h3>Tom Robertson</h3>
-            <div class="staff-role">Director of Football Operations</div>
-        </div>
+                <h2>
+                    Staff
+                </h2>
 
-    </div>
+                <p>
+                    The people working behind the scenes at
+                    South Benfleet Social Club FC.
+                </p>
 
-</section>
+            </div>
 
-        </div>
+            <div class="staff-grid">
+
+                <div class="staff-card">
+                    <h3>Tony Hoskins</h3>
+                    <div class="staff-role">Manager</div>
+                </div>
+
+                <div class="staff-card">
+                    <h3>Ron Forrester</h3>
+                    <div class="staff-role">Assistant Manager</div>
+                </div>
+
+                <div class="staff-card">
+                    <h3>Dave Ince</h3>
+                    <div class="staff-role">GK Coach</div>
+                </div>
+
+                <div class="staff-card">
+                    <h3>Mitch Stripe</h3>
+                    <div class="staff-role">Coach</div>
+                </div>
+
+                <div class="staff-card">
+                    <h3>Martin Pauling</h3>
+                    <div class="staff-role">Club Treasurer</div>
+                </div>
+
+                <div class="staff-card">
+                    <h3>Tom Robertson</h3>
+                    <div class="staff-role">
+                        Director of Football Operations
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
 
 
         <div class="profile-note">
